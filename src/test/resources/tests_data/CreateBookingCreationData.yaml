@@ -6,3 +6,21 @@
     checkin : 2018-01-01
     checkout : 2019-01-01
   additionalneeds: Breakfast
+
+- firstname: Peter1
+  lastname: Jenson1
+  totalprice: 150
+  depositpaid: true
+  bookingdates:
+    checkin : 2018-01-01
+    checkout : 2019-01-01
+  additionalneeds: Breakfast 
+
+- firstname: Peter2
+  lastname: Jenson2
+  totalprice: 151
+  depositpaid: false
+  bookingdates:
+    checkin : 2018-01-01
+    checkout : 2019-01-01
+  additionalneeds: Breakfast    
