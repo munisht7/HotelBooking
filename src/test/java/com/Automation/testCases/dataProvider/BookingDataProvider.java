@@ -1,6 +1,5 @@
 package com.Automation.testCases.dataProvider;
 
-
 import com.Automation.base.BaseClassProvider;
 import com.Automation.model.CreateBookingRequest;
 import com.tngtech.java.junit.dataprovider.DataProvider;

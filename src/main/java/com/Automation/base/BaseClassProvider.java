@@ -1,12 +1,10 @@
 package com.Automation.base;
 
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.File;
-import java.io.IOException;
 
 public class BaseClassProvider {
 
@@ -37,10 +35,4 @@ public class BaseClassProvider {
         return user;
     }
 
-    //  protected final void generateYAMLFile(String yamlFilePath, Object object)
-    //         throws JsonGenerationException, IOException {
-    //     ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-    //     // Write object as YAML file
-    //     mapper.writeValue(new File(TestUtil.getResourceAbsolutePath(yamlFilePath)), object);
-    // }
 }

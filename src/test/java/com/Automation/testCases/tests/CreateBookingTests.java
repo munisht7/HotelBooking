@@ -34,5 +34,4 @@ public class CreateBookingTests {
         assertEquals(200, response.getStatusCode());
     }
 
-    
 }

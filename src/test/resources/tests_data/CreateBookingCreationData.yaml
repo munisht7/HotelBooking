@@ -3,24 +3,24 @@
   totalprice: 150
   depositpaid: true
   bookingdates:
-    checkin : 2018-01-01
+    checkin : 2015-01-01
     checkout : 2019-01-01
   additionalneeds: Breakfast
 
-- firstname: Peter1
-  lastname: Jenson1
-  totalprice: 150
+- firstname: Thiago
+  lastname: Jenson
+  totalprice: 1000
   depositpaid: true
   bookingdates:
     checkin : 2018-01-01
-    checkout : 2019-01-01
-  additionalneeds: Breakfast 
+    checkout : 2021-01-01
+  additionalneeds: Dinner 
 
-- firstname: Peter2
-  lastname: Jenson2
+- firstname: John
+  lastname: Jenson
   totalprice: 151
   depositpaid: false
   bookingdates:
     checkin : 2018-01-01
-    checkout : 2019-01-01
-  additionalneeds: Breakfast    
+    checkout : 2023-01-01
+  additionalneeds: Lunch 
