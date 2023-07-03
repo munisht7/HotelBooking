@@ -1,4 +1,5 @@
 /Users/Munish.Thakur/IdeaProjects/HotelBooking/src/main/java/com/Automation/util/ConfigReader.java
+/Users/Munish.Thakur/IdeaProjects/HotelBooking/src/main/java/com/Automation/util/CreateBooking.java
 /Users/Munish.Thakur/IdeaProjects/HotelBooking/src/main/java/com/Automation/base/BaseSetUp.java
 /Users/Munish.Thakur/IdeaProjects/HotelBooking/src/main/java/com/Automation/model/BaseModel.java
 /Users/Munish.Thakur/IdeaProjects/HotelBooking/src/main/java/com/Automation/constants/EndPoint.java
@@ -6,3 +7,4 @@
 /Users/Munish.Thakur/IdeaProjects/HotelBooking/src/main/java/com/Automation/controllers/BookingController.java
 /Users/Munish.Thakur/IdeaProjects/HotelBooking/src/main/java/com/Automation/model/CreateBookingRequest.java
 /Users/Munish.Thakur/IdeaProjects/HotelBooking/src/main/java/com/Automation/base/BaseClassProvider.java
+/Users/Munish.Thakur/IdeaProjects/HotelBooking/src/main/java/com/Automation/util/GetAuth.java

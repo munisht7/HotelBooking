@@ -2,8 +2,10 @@ com/Automation/base/BaseSetUp.class
 com/Automation/constants/EndPoint$BOOKING_DETAILS.class
 com/Automation/model/BaseModel.class
 com/Automation/controllers/BookingController.class
+com/Automation/util/GetAuth.class
 com/Automation/model/CreateBookingRequest.class
 com/Automation/model/UpdateBookingRequest.class
 com/Automation/base/BaseClassProvider.class
 com/Automation/util/ConfigReader.class
 com/Automation/constants/EndPoint.class
+com/Automation/util/CreateBooking.class

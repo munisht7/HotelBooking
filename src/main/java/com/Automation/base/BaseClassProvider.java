@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 
 public class BaseClassProvider {
-
     private static final Logger LOG = LoggerFactory.getLogger(BaseClassProvider.class);
     public static <T> Object[][] testDataGenerator(final String inputDataFile, Class<T[]> classz) {
         T[] dateSet = loadDataFromYamlFile(inputDataFile, classz);

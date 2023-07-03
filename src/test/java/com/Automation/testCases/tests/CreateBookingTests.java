@@ -17,19 +17,16 @@ import io.restassured.response.Response;
 
 @RunWith(DataProviderRunner.class)
 public class CreateBookingTests {
-
     private static final Logger LOG = LoggerFactory.getLogger(CreateBookingTests.class);
     BookingController bookingController = new BookingController();
-
     @Test
     @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class)
     @DisplayName("Create a new booking with different set of data ")
-    public void createBookingTest(Object CreateRequest) throws Exception{
+    public void createBookingTest(Object CreateRequest){
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue= new HashMap<>();
         headerValue.put("accept","application/json");
-
         Response response = bookingController.postBooking(createBookingRequest,headerValue);
 
         LOG.info("ASSERTING THE API RESPONSE");
@@ -47,32 +44,28 @@ public class CreateBookingTests {
     @Test
     @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class)
     @DisplayName("Checking the response wih application/javascript as header")
-    public void createBookingWithOtherHeaderTypes(Object CreateRequest) throws Exception{
+    public void createBookingWithOtherHeaderTypes(Object CreateRequest) {
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue= new HashMap<>();
         headerValue.put("accept","application/javascript");
-
         Response response = bookingController.postBooking(createBookingRequest,headerValue);
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(418, response.getStatusCode());
-
     }
     @Test
     @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class)
     @DisplayName("Checking the response for 500 ")
-    public void createBookingTestWithNullDepositPaid(Object CreateRequest) throws Exception{
+    public void createBookingTestWithNullDepositPaid(Object CreateRequest){
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         createBookingRequest.setDepositpaid(null);
         HashMap<String, String> headerValue= new HashMap<>();
         headerValue.put("accept","application/json");
-
         Response response = bookingController.postBooking(createBookingRequest,headerValue);
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(500, response.getStatusCode());
-
     }
 }

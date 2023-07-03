@@ -1,7 +1,6 @@
 package com.Automation.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class UpdateBookingRequest {
     @JsonProperty("firstname")
     private String firstname;
@@ -18,5 +17,5 @@ public class UpdateBookingRequest {
     }
     public void setLastname(String lastname) {
         this.lastname = lastname;
-    }     
+    }
 }
