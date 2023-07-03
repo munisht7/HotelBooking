@@ -1,7 +1,7 @@
 package com.Automation.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-public class UpdateBookingRequest {
+public class PartialUpdateBookingRequest {
     @JsonProperty("firstname")
     private String firstname;
     @JsonProperty("lastname")

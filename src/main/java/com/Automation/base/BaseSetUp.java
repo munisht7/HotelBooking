@@ -1,7 +1,7 @@
 package com.Automation.base;
 
 import com.Automation.model.CreateBookingRequest;
-import com.Automation.model.UpdateBookingRequest;
+import com.Automation.model.PartialUpdateBookingRequest;
 import io.restassured.response.Response;
 import java.util.HashMap;
 import java.util.Map;
@@ -61,7 +61,7 @@ public class BaseSetUp {
                 extract().response();
         return response;
     }
-    public Response patchApiWithPathParam(String url, UpdateBookingRequest requestbody, String contentType, HashMap<String, ? extends Object> headerParameters, Integer pathParam) {
+    public Response patchApiWithPathParam(String url, PartialUpdateBookingRequest requestbody, String contentType, HashMap<String, ? extends Object> headerParameters, Integer pathParam) {
         response= given().contentType(contentType).
                 body(requestbody).
                 headers(headerParameters).
