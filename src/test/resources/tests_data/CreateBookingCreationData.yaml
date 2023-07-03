@@ -7,20 +7,20 @@
     checkout : 2019-01-01
   additionalneeds: Breakfast
 
-- firstname: Thiago
+- firstname: Peter
   lastname: Jenson
   totalprice: 1000
   depositpaid: true
   bookingdates:
     checkin : 2018-01-01
     checkout : 2021-01-01
-  additionalneeds: Dinner 
+  additionalneeds: Breakfast 
 
-- firstname: John
+- firstname: Peter
   lastname: Jenson
   totalprice: 151
   depositpaid: false
   bookingdates:
     checkin : 2018-01-01
     checkout : 2023-01-01
-  additionalneeds: Lunch 
+  additionalneeds: Breakfast 

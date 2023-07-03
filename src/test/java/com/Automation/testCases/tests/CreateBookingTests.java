@@ -1,8 +1,10 @@
 package com.Automation.testCases.tests;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.HashMap;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +23,8 @@ public class CreateBookingTests {
 
     
     @Test
-    @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class )
+    @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class)
+    @DisplayName("Create a new booking with different set of data ")
     public void createBookingTest(Object CreateRequest) throws Exception{
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
@@ -32,6 +35,14 @@ public class CreateBookingTests {
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(200, response.getStatusCode());
-    }
+        assertNotNull(null, response.path("bookingid"));
+        assertEquals("Peter",response.path("booking.firstname"));
+        assertEquals("Jenson",response.path("booking.lastname"));
+        assertNotNull( response.path("bookingid.totalprice"));
+        assertNotNull( response.path("bookingid.depositpaid"));
+        assertNotNull( response.path("bookingid.booking.checkin"));
+        assertNotNull( response.path("bookingid.booking.checkout"));
+        assertEquals("Breakfast", response.path("booking.additionalneeds"));
 
+    }
 }
