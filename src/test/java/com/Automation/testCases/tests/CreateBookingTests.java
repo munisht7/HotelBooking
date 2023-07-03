@@ -19,6 +19,7 @@ import io.restassured.response.Response;
 public class CreateBookingTests {
     private static final Logger LOG = LoggerFactory.getLogger(CreateBookingTests.class);
     BookingController bookingController = new BookingController();
+
     @Test
     @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class)
     @DisplayName("Create a new booking with different set of data ")

@@ -20,6 +20,7 @@ import java.util.HashMap;
 public class GetBookingTests {
     private static final Logger LOG = LoggerFactory.getLogger(GetBookingTests.class);
     BookingController bookingController = new BookingController();
+
     @Test
     @DisplayName("validating the Get Booking without Filter")
     public void getBookingDetailsWithoutFilter() {

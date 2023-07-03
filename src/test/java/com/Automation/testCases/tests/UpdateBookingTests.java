@@ -22,6 +22,7 @@ public class UpdateBookingTests {
     BookingController bookingController = new BookingController();
     GetAuth getAuth = new GetAuth();
     CreateBooking createBooking = new CreateBooking();
+
     @Test
     @UseDataProvider(value ="updateBookingDetails" , location = BookingDataProvider.class)
     @DisplayName("Updating the first and last name")
