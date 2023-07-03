@@ -21,7 +21,6 @@ public class CreateBookingTests {
     private static final Logger LOG = LoggerFactory.getLogger(CreateBookingTests.class);
     BookingController bookingController = new BookingController();
 
-    
     @Test
     @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class)
     @DisplayName("Create a new booking with different set of data ")
@@ -45,7 +44,6 @@ public class CreateBookingTests {
         assertEquals("Breakfast", response.path("booking.additionalneeds"));
 
     }
-
     @Test
     @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class)
     @DisplayName("Checking the response wih application/javascript as header")
@@ -61,7 +59,6 @@ public class CreateBookingTests {
         assertEquals(418, response.getStatusCode());
 
     }
-
     @Test
     @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class)
     @DisplayName("Checking the response for 500 ")
@@ -78,5 +75,4 @@ public class CreateBookingTests {
         assertEquals(500, response.getStatusCode());
 
     }
-
 }

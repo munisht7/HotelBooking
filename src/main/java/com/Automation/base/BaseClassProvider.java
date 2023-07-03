@@ -9,7 +9,6 @@ import java.io.File;
 public class BaseClassProvider {
 
     private static final Logger LOG = LoggerFactory.getLogger(BaseClassProvider.class);
-
     public static <T> Object[][] testDataGenerator(final String inputDataFile, Class<T[]> classz) {
         T[] dateSet = loadDataFromYamlFile(inputDataFile, classz);
         Object[][] obj = new Object[dateSet.length][1];
@@ -18,16 +17,13 @@ public class BaseClassProvider {
         }
         return obj;
     }
-
     public static <T> T[] loadDataFromYamlFile(final String inputDataFile, Class<T[]> classz) {
         LOG.info("LOADING DATA FROM YAML FILE");
         LOG.info(inputDataFile);
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
         T[] user = null;
         try {
-
             user = mapper.readValue(new File(inputDataFile), classz);
-
         } catch (Exception e) {
             LOG.error("ENCOUNGTERED EXCEPTION WHILE CONVERTING YAML FILE TO POJO. EXCEPTION MESSAGE :" + e.getMessage());
             e.printStackTrace();

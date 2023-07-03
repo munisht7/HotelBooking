@@ -10,7 +10,6 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 public class BaseSetUp {
     public Response response = null;
-
     public Response postApi(String url, CreateBookingRequest requestbody, String contentType, HashMap<String, ? extends Object> headerParameters) {
         response= given().contentType(contentType).
                 body(requestbody).
@@ -22,7 +21,6 @@ public class BaseSetUp {
                         extract().response();
         return response;
     }
-
     public Response postApiForAuth(String url, String requestbody, String contentType) {
         response= given().contentType(contentType).
                 body(requestbody).
@@ -33,7 +31,6 @@ public class BaseSetUp {
                         extract().response();
         return response;
     }
-
     public Response getApi(String url, String contentType, HashMap<String, ? extends Object> headerParameters) {
         response= given().contentType(contentType).
                 headers(headerParameters).
@@ -44,7 +41,6 @@ public class BaseSetUp {
                 extract().response();
         return response;
     }
-
     public Response getApiWithPathParam(String url, String contentType, HashMap<String, ? extends Object> headerParameters,String pathParam) {
         response= given().contentType(contentType).
                 headers(headerParameters).
@@ -55,7 +51,6 @@ public class BaseSetUp {
                 extract().response();
         return response;
     }
-
     public Response patchApiWithPathParam(String url,UpdateBookingRequest requestbody, String contentType, HashMap<String, ? extends Object> headerParameters,String pathParam) {
         response= given().contentType(contentType).
                 body(requestbody).
@@ -67,7 +62,6 @@ public class BaseSetUp {
                 extract().response();
         return response;
     }
-
     public Response putApiWithPathParam(String url, UpdateBookingRequest requestbody, String contentType, HashMap<String, ? extends Object> headerParameters,String pathParam) {
         response= given().contentType(contentType).
                 body(requestbody).
@@ -79,7 +73,6 @@ public class BaseSetUp {
                 extract().response();
         return response;
     }
-
     public Response getApiwithQueryParam(String url, String contentType, Map<String,? extends Object> headerParameters, Map<String,? extends Object> queryParam){
         response = given().contentType(contentType).
                 headers(headerParameters).
@@ -87,5 +80,4 @@ public class BaseSetUp {
                 .get(url).then().extract().response();
         return response;
     }
-    
 }

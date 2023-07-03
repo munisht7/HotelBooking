@@ -19,22 +19,17 @@ import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 
 @RunWith(DataProviderRunner.class)
 public class UpdateBookingTests {
-
     private static final Logger LOG = LoggerFactory.getLogger(UpdateBookingTests.class);
     BookingController bookingController = new BookingController();
-
     @Test
     @UseDataProvider(value ="updateBookingDetails" , location = BookingDataProvider.class)
     @DisplayName("Updating of the first and last name")
     public void updateFirstAndLastName(Object UpdateRequest) throws Exception {
-
         UpdateBookingRequest updateBookingRequest = UpdateBookingRequest.class.cast(UpdateRequest);
-
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
         headerValue.put("accept", "application/json");
         headerValue.put("cookie", "token="+getAuth());
-
         Response response = bookingController.patchBooking(updateBookingRequest,headerValue,"1");
 
         LOG.info("ASSERTING THE API RESPONSE");
@@ -50,9 +45,7 @@ public class UpdateBookingTests {
                 "    \"username\": \"admin\",\n" +
                 "    \"password\": \"password123\"\n" +
                 "}";
-
         Response response= bookingController.postAuth(requestBody);
         return response.path("token");
     }
-
 }

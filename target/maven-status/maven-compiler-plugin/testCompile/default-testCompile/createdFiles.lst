@@ -1,1 +1,4 @@
+com/Automation/testCases/tests/GetBookingTests.class
 com/Automation/testCases/dataProvider/BookingDataProvider.class
+com/Automation/testCases/tests/UpdateBookingTests.class
+com/Automation/testCases/tests/CreateBookingTests.class
