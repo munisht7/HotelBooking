@@ -38,11 +38,45 @@ public class CreateBookingTests {
         assertNotNull(null, response.path("bookingid"));
         assertEquals("Peter",response.path("booking.firstname"));
         assertEquals("Jenson",response.path("booking.lastname"));
-        assertNotNull( response.path("bookingid.totalprice"));
-        assertNotNull( response.path("bookingid.depositpaid"));
-        assertNotNull( response.path("bookingid.booking.checkin"));
-        assertNotNull( response.path("bookingid.booking.checkout"));
+        assertNotNull( response.path("booking.totalprice"));
+        assertNotNull( response.path("booking.depositpaid"));
+        assertNotNull( response.path("booking.bookingdates.checkin"));
+        assertNotNull( response.path("booking.bookingdates.checkout"));
         assertEquals("Breakfast", response.path("booking.additionalneeds"));
 
     }
+
+    @Test
+    @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class)
+    @DisplayName("Checking the response wih application/javascript as header")
+    public void createBookingWithOtherHeaderTypes(Object CreateRequest) throws Exception{
+
+        CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
+        HashMap<String, String> headerValue= new HashMap<>();
+        headerValue.put("accept","application/javascript");
+
+        Response response = bookingController.postBooking(createBookingRequest,headerValue);
+
+        LOG.info("ASSERTING THE API RESPONSE");
+        assertEquals(418, response.getStatusCode());
+
+    }
+
+    @Test
+    @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class)
+    @DisplayName("Checking the response for 500 ")
+    public void createBookingTestWithNullDepositPaid(Object CreateRequest) throws Exception{
+
+        CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
+        createBookingRequest.setDepositpaid(null);
+        HashMap<String, String> headerValue= new HashMap<>();
+        headerValue.put("accept","application/json");
+
+        Response response = bookingController.postBooking(createBookingRequest,headerValue);
+
+        LOG.info("ASSERTING THE API RESPONSE");
+        assertEquals(500, response.getStatusCode());
+
+    }
+
 }

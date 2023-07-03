@@ -1,11 +1,7 @@
 package com.Automation.testCases.tests;
 
 import com.Automation.controllers.BookingController;
-import com.Automation.model.GetBookingRequest;
-import com.tngtech.java.junit.dataprovider.UseDataProvider;
-
 import io.restassured.response.Response;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -47,7 +43,7 @@ public class GetBookingTests {
         HashMap<String, String> headerValue = new HashMap<>();
         headerValue.put("accept", "application/json");
 
-        Response response = bookingController.getBookingWithPathParam(headerValue,"100");
+        Response response = bookingController.getBookingWithPathParam(headerValue,"1000");
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(200, response.getStatusCode());
@@ -89,7 +85,7 @@ public class GetBookingTests {
         HashMap<String, String> headerValue = new HashMap<>();
         headerValue.put("accept", "application/javascript");
 
-        Response response = bookingController.getBookingWithPathParam(headerValue,"1001");
+        Response response = bookingController.getBookingWithPathParam(headerValue,"1000");
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(418, response.getStatusCode());

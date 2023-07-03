@@ -34,5 +34,4 @@ public class BaseClassProvider {
         }
         return user;
     }
-
 }
