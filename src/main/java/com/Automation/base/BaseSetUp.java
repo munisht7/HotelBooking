@@ -5,7 +5,6 @@ import com.Automation.model.PartialUpdateBookingRequest;
 import io.restassured.response.Response;
 import java.util.HashMap;
 import java.util.Map;
-
 import static io.restassured.RestAssured.given;
 public class BaseSetUp {
     public Response response = null;

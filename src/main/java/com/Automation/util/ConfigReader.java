@@ -2,15 +2,13 @@ package com.Automation.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.FileInputStream;
 import java.util.Properties;
 
  public class  ConfigReader {
-        private String applicationUrl = "";
-
+     private String applicationUrl = "";
      private static final Logger LOGGER = LoggerFactory.getLogger(ConfigReader.class);
 
      public ConfigReader() {
