@@ -1,5 +1,9 @@
 # HotelBooking
 
+## Overview
+* Test the hotel booking API's by verifying successful booking creation with valid input data.
+* Validate the API's response for handling invalid or missing parameters during the hotel booking process.
+
 ## Pre-requisites for Setup Configuration
 The following components are required to get started with automation:
 * Install Java(JDK)
@@ -19,31 +23,31 @@ The following components are required to get started with automation:
 * Properties can be configured in the **config.properties** file, refer to the path : **src/main/java/com/Automation/config/config.properties**
 * For example, if you declare the following property in your config.properties file:
   `applicationUrl="https://restful-booker.herokuapp.com"`
-  the property applicationUrl will be set to v3 version of the swagger API's.
+  the property applicationUrl will be set.
 
 ## Directory structure
-* -src
+* src
    - main
      - java
        - com
-       - Automtion
-         - base
-           - BaseClassProvider (provides a base implementation or functionality for other classes to inherit or extend from)
-           - BaseSetUp  (common setup)
-         - config
-           - config.properties (contains the applicationurl for all the APi's)
-         - constants
-           - EndPoint ( contains the endpoints to be tested)
-         - controllers
-           - BookingController (handles the logic and operations related to booking functionality)
-         - model
-           - BaseModel (serves as a common base)
-           - CreateBookingRequest (Getters and setters for creating booking request)
-           - PartialUpdateBookingRequest (Getters and setters for Partial Update Booking Request )
-         - util
-           - ConfigReader (this file is for reading the configurations from config.properties)
-           - CreateBooking (contains a method to return the bookingId after calling the create booking API)
-           - GetAuth (contains a method to return the token to used for delete and partial update booking)
+         - Automation
+           - base
+             - BaseClassProvider (provides a base implementation or functionality for other classes to inherit or extend from)
+             - BaseSetUp  (common setup)
+           - config
+             - config.properties (contains the applicationUrl for all the APi's)
+           - constants
+             - EndPoint ( contains the endpoints to be tested)
+           - controllers
+             - BookingController (handles the logic and operations related to booking functionality)
+           - model
+             - BaseModel (serves as a common base)
+             - CreateBookingRequest (Getters and setters for creating booking request)
+             - PartialUpdateBookingRequest (Getters and setters for Partial Update Booking Request )
+           - util
+             - ConfigReader (this file is for reading the configurations from config.properties)
+             - CreateBooking (contains a method to return the bookingId after calling the create booking API)
+             - GetAuth (contains a method to return the token to used for delete and partial update booking)
    - test
      - java
        - com
@@ -58,16 +62,14 @@ The following components are required to get started with automation:
                - PartialUpdateBookingTests ( contains test cases : 1.For partial updating the booking  2.Cannot update the booking without Auth Token)
 
 ## Run tests locally
-* Right click one of the feature files at **src/test/java/com.apiAutomation.testCases/tests**
-* Select **"Run"** or **"Debug"** to start the test.
+* Right click one of the feature files at **src/test/java/com/Automation/testCases/tests**
+* Select **"Run"** or **"Debug"** to start the test
 
 ## Run tests using terminal
-* Execute the test cases through terminal using maven by using the following command : mvn test
+* Execute the test cases through terminal using maven by using the following command : **mvn test**
 
-## Run the JUnit Suite
-* Right click one of the feature files at **src/test/resources/JUnit.xml**
-* Select **"Run"** or **"Debug"** to start the test.
-
+## Run the JUnit Test Cases
+* Select **"Run"** or **"Debug"** to start the test
 
 ## Referred to the following links for the project
 
