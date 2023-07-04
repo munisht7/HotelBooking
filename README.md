@@ -21,6 +21,42 @@ The following components are required to get started with automation:
   `applicationUrl="https://restful-booker.herokuapp.com"`
   the property applicationUrl will be set to v3 version of the swagger API's.
 
+## Directory structure
+* -src
+   - main
+     - java
+       - com
+       - Automtion
+         - base
+           - BaseClassProvider (provides a base implementation or functionality for other classes to inherit or extend from)
+           - BaseSetUp  (common setup)
+         - config
+           - config.properties (contains the applicationurl for all the APi's)
+         - constants
+           - EndPoint ( contains the endpoints to be tested)
+         - controllers
+           - BookingController (handles the logic and operations related to booking functionality)
+         - model
+           - BaseModel (serves as a common base)
+           - CreateBookingRequest (Getters and setters for creating booking request)
+           - PartialUpdateBookingRequest (Getters and setters for Partial Update Booking Request )
+         - util
+           - ConfigReader (this file is for reading the configurations from config.properties)
+           - CreateBooking (contains a method to return the bookingId after calling the create booking API)
+           - GetAuth (contains a method to return the token to used for delete and partial update booking)
+   - test
+     - java
+       - com
+         - Automation
+           - testCases
+             - dataProvider
+               - BookingDataProvider (contains method to read the yaml file and use it as dataProvider for data driven testing)
+             - tests
+               - CreateBookingTests (validating the happy and unhappy test cases for booking creation)
+               - DeleteBookingTests ( contains test cases : 1.For deleting the booking  2.Cannot delete the booking without Auth Token)
+               - GetBookingTests ( Get booking test cases : 1.Get Booking without filter 2.Get Booking with filter 3.Get Booking with first and last name 4.Checking the Get Booking with Other header types )
+               - PartialUpdateBookingTests ( contains test cases : 1.For partial updating the booking  2.Cannot update the booking without Auth Token)
+
 ## Run tests locally
 * Right click one of the feature files at **src/test/java/com.apiAutomation.testCases/tests**
 * Select **"Run"** or **"Debug"** to start the test.

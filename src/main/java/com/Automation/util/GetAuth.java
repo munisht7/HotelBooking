@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 
 public class GetAuth {
     BookingController bookingController = new BookingController();
-    public String getAuth()throws Exception{
+    public String getAuth(){
         String requestBody="{\n" +
                 "    \"username\": \"admin\",\n" +
                 "    \"password\": \"password123\"\n" +
