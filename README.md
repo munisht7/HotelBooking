@@ -71,6 +71,11 @@ The following components are required to get started with automation:
 ## Run the JUnit Test Cases
 * Select **"Run"** or **"Debug"** to start the test
 
+## Reporting
+* Run **mvn site** command from the terminal. It will generate HTML reports in **target/site** directory
+* Open the **surefire-report.html** file in the browser , report will be like as shown below
+![](../../Desktop/Screenshot 2023-07-04 at 11.00.33.png)
+
 ## Referred to the following links for the project
 
 * JUnit Documentation : https://junit.org/junit5/docs/current/user-guide/
