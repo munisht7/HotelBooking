@@ -63,10 +63,10 @@ The following components are required to get started with automation:
                - DeleteBookingTests ( contains test cases : 1.For deleting the booking  2.Cannot delete the booking without Auth Token)
                - GetBookingTests ( Get booking test cases : 1.Get Booking without filter 2.Get Booking with filter 3.Get Booking with first and last name 4.Checking the Get Booking with Other header types )
                - PartialUpdateBookingTests ( contains test cases : 1.For partial updating the booking  2.Cannot update the booking without Auth Token)
-   - resources
-     - tests_data
-       - CreateBookingCreationData.yaml (contains the data for creating the booking)
-       - PartialUpdateBookingCreationData.yaml (contains the data for updating the booking)
+     - resources
+       - tests_data
+         - CreateBookingCreationData.yaml (contains the data for creating the booking)
+         - PartialUpdateBookingCreationData.yaml (contains the data for updating the booking)
 
 ## Run tests locally
 * Right click one of the feature files at **src/test/java/com/Automation/testCases/tests**
