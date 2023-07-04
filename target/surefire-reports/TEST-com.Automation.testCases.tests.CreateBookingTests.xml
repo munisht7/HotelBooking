@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.Automation.testCases.tests.CreateBookingTests" time="5.333" tests="9" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="20"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/Munish.Thakur/IdeaProjects/HotelBooking/target/test-classes:/Users/Munish.Thakur/IdeaProjects/HotelBooking/target/classes:/Users/Munish.Thakur/.m2/repository/org/slf4j/slf4j-simple/2.0.7/slf4j-simple-2.0.7.jar:/Users/Munish.Thakur/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/Users/Munish.Thakur/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.2/jackson-dataformat-yaml-2.15.2.jar:/Users/Munish.Thakur/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar:/Users/Munish.Thakur/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/Munish.Thakur/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/Munish.Thakur/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/Munish.Thakur/.m2/repository/io/rest-assured/rest-assured/5.3.1/rest-assured-5.3.1.jar:/Users/Munish.Thakur/.m2/repository/org/apache/groovy/groovy/4.0.11/groovy-4.0.11.jar:/Users/Munish.Thakur/.m2/repository/org/apache/groovy/groovy-xml/4.0.11/groovy-xml-4.0.11.jar:/Users/Munish.Thakur/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/Munish.Thakur/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/Munish.Thakur/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/Munish.Thakur/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/Munish.Thakur/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/Munish.Thakur/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/Munish.Thakur/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/Munish.Thakur/.m2/repository/io/rest-assured/json-path/5.3.1/json-path-5.3.1.jar:/Users/Munish.Thakur/.m2/repository/org/apache/groovy/groovy-json/4.0.11/groovy-json-4.0.11.jar:/Users/Munish.Thakur/.m2/repository/io/rest-assured/rest-assured-common/5.3.1/rest-assured-common-5.3.1.jar:/Users/Munish.Thakur/.m2/repository/io/rest-assured/xml-path/5.3.1/xml-path-5.3.1.jar:/Users/Munish.Thakur/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/Munish.Thakur/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/Munish.Thakur/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/Munish.Thakur/.m2/repository/com/tngtech/java/junit-dataprovider/1.11.0/junit-dataprovider-1.11.0.jar:/Users/Munish.Thakur/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/Munish.Thakur/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/Munish.Thakur/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/Munish.Thakur/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="Europe/Amsterdam"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="20"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="NL"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/20.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/Munish.Thakur/IdeaProjects/HotelBooking/target/surefire/surefirebooter-20230704134523405_3.jar /Users/Munish.Thakur/IdeaProjects/HotelBooking/target/surefire 2023-07-04T13-45-23_341-jvmRun1 surefire-20230704134523405_1tmp surefire_0-20230704134523405_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/Munish.Thakur/IdeaProjects/HotelBooking/target/test-classes:/Users/Munish.Thakur/IdeaProjects/HotelBooking/target/classes:/Users/Munish.Thakur/.m2/repository/org/slf4j/slf4j-simple/2.0.7/slf4j-simple-2.0.7.jar:/Users/Munish.Thakur/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/Users/Munish.Thakur/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.2/jackson-dataformat-yaml-2.15.2.jar:/Users/Munish.Thakur/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar:/Users/Munish.Thakur/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/Munish.Thakur/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/Munish.Thakur/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/Munish.Thakur/.m2/repository/io/rest-assured/rest-assured/5.3.1/rest-assured-5.3.1.jar:/Users/Munish.Thakur/.m2/repository/org/apache/groovy/groovy/4.0.11/groovy-4.0.11.jar:/Users/Munish.Thakur/.m2/repository/org/apache/groovy/groovy-xml/4.0.11/groovy-xml-4.0.11.jar:/Users/Munish.Thakur/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/Munish.Thakur/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/Munish.Thakur/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/Munish.Thakur/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/Munish.Thakur/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/Munish.Thakur/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/Munish.Thakur/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/Munish.Thakur/.m2/repository/io/rest-assured/json-path/5.3.1/json-path-5.3.1.jar:/Users/Munish.Thakur/.m2/repository/org/apache/groovy/groovy-json/4.0.11/groovy-json-4.0.11.jar:/Users/Munish.Thakur/.m2/repository/io/rest-assured/rest-assured-common/5.3.1/rest-assured-common-5.3.1.jar:/Users/Munish.Thakur/.m2/repository/io/rest-assured/xml-path/5.3.1/xml-path-5.3.1.jar:/Users/Munish.Thakur/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/Munish.Thakur/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/Munish.Thakur/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/Munish.Thakur/.m2/repository/com/tngtech/java/junit-dataprovider/1.11.0/junit-dataprovider-1.11.0.jar:/Users/Munish.Thakur/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/Munish.Thakur/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/Munish.Thakur/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/Munish.Thakur/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/Munish.Thakur"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/20.0.1/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/Munish.Thakur/IdeaProjects/HotelBooking"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/Munish.Thakur/IdeaProjects/HotelBooking/target/surefire/surefirebooter-20230704134523405_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="20.0.1"/>
+    <property name="user.name" value="Munish.Thakur"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="13.4.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/Munish.Thakur/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/w1/nw2t6fm91wz_5qcd2hf215zm0000gp/T/"/>
+    <property name="java.version" value="20.0.1"/>
+    <property name="user.dir" value="/Users/Munish.Thakur/IdeaProjects/HotelBooking"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/Munish.Thakur/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="20.0.1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="64.0"/>
+  </properties>
+  <testcase name="createBookingTest[0: com.Automation.model.CreateBookingRequest@69504ae9]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.645">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Peter",
+    "bookingdates": {
+        "checkin": "2015-01-01",
+        "checkout": "2019-01-01"
+    },
+    "lastname": "Jenson",
+    "totalprice": 150,
+    "depositpaid": true,
+    "additionalneeds": "Breakfast"
+}
+]]></system-out>
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
+]]></system-err>
+  </testcase>
+  <testcase name="createBookingTest[1: com.Automation.model.CreateBookingRequest@387a8303]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.617">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Peter",
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2021-01-01"
+    },
+    "lastname": "Jenson",
+    "totalprice": 1000,
+    "depositpaid": true,
+    "additionalneeds": "Breakfast"
+}
+]]></system-out>
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
+]]></system-err>
+  </testcase>
+  <testcase name="createBookingTest[2: com.Automation.model.CreateBookingRequest@28cda624]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.622">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Peter",
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2023-01-01"
+    },
+    "lastname": "Jenson",
+    "totalprice": 1,
+    "depositpaid": false,
+    "additionalneeds": "Breakfast"
+}
+]]></system-out>
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
+]]></system-err>
+  </testcase>
+  <testcase name="createBookingWithOtherHeaderTypes[0: com.Automation.model.CreateBookingRequest@1500b2f3]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.573">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		accept=application/javascript
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Peter",
+    "bookingdates": {
+        "checkin": "2015-01-01",
+        "checkout": "2019-01-01"
+    },
+    "lastname": "Jenson",
+    "totalprice": 150,
+    "depositpaid": true,
+    "additionalneeds": "Breakfast"
+}
+]]></system-out>
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
+]]></system-err>
+  </testcase>
+  <testcase name="createBookingWithOtherHeaderTypes[1: com.Automation.model.CreateBookingRequest@7eecb5b8]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.561">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		accept=application/javascript
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Peter",
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2021-01-01"
+    },
+    "lastname": "Jenson",
+    "totalprice": 1000,
+    "depositpaid": true,
+    "additionalneeds": "Breakfast"
+}
+]]></system-out>
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
+]]></system-err>
+  </testcase>
+  <testcase name="createBookingWithOtherHeaderTypes[2: com.Automation.model.CreateBookingRequest@126253fd]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.585">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		accept=application/javascript
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Peter",
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2023-01-01"
+    },
+    "lastname": "Jenson",
+    "totalprice": 1,
+    "depositpaid": false,
+    "additionalneeds": "Breakfast"
+}
+]]></system-out>
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
+]]></system-err>
+  </testcase>
+  <testcase name="createBookingTestWithNullDepositPaid[0: com.Automation.model.CreateBookingRequest@57db2b13]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.58">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Peter",
+    "bookingdates": {
+        "checkin": "2015-01-01",
+        "checkout": "2019-01-01"
+    },
+    "lastname": "Jenson",
+    "totalprice": 150,
+    "depositpaid": null,
+    "additionalneeds": "Breakfast"
+}
+]]></system-out>
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
+]]></system-err>
+  </testcase>
+  <testcase name="createBookingTestWithNullDepositPaid[1: com.Automation.model.CreateBookingRequest@475c9c31]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.563">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Peter",
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2021-01-01"
+    },
+    "lastname": "Jenson",
+    "totalprice": 1000,
+    "depositpaid": null,
+    "additionalneeds": "Breakfast"
+}
+]]></system-out>
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
+]]></system-err>
+  </testcase>
+  <testcase name="createBookingTestWithNullDepositPaid[2: com.Automation.model.CreateBookingRequest@5c86a017]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.58">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Peter",
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2023-01-01"
+    },
+    "lastname": "Jenson",
+    "totalprice": 1,
+    "depositpaid": null,
+    "additionalneeds": "Breakfast"
+}
+]]></system-out>
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
+]]></system-err>
+  </testcase>
+</testsuite>
