@@ -12,7 +12,7 @@ The following components are required to get started with automation:
 * Configuring RestAssured with IntelliJ
 
 ## Getting Started
-* Copy the repository into your local machine using the github url -> https://github.com/munisht7/HotelBooking.git.
+* Copy the repository into your local machine using the github url -> https://github.com/munisht7/HotelBooking.git
 * Checkout **main** branch for the latest changes.
 
 ## Built With
@@ -38,7 +38,7 @@ The following components are required to get started with automation:
              - BaseClassProvider (provides a base implementation or functionality for other classes to inherit or extend from)
              - BaseSetUp  (common setup)
            - config
-             - config.properties (contains the applicationUrl for all the APi's)
+             - config.properties (contains the applicationUrl for all the API's)
            - constants
              - EndPoint ( contains the endpoints to be tested)
            - controllers
