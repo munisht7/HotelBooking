@@ -73,7 +73,7 @@ The following components are required to get started with automation:
 
 ## Reporting
 * Run **mvn site** command from the terminal. It will generate HTML reports in **target/site** directory
-* Open the **surefire-report.html** file in the browser like shown below
+* Open the **surefire-report.html** file in the browser like shown below :
  ![](../../Desktop/report.png)
 
 ## Referred to the following links for the project
