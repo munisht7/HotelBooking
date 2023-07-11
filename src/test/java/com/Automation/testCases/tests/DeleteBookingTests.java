@@ -37,6 +37,11 @@ public class DeleteBookingTests {
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(201, deleteResponse.getStatusCode());
+
+        Response getresponse = bookingController.getBookingWithPathParam(headerValue,response.path("bookingid"));
+        LOG.info("ASSERTING THE API RESPONSE");
+        assertEquals(404, getresponse.getStatusCode());
+        assertEquals("Not Found", getresponse.body().print());
     }
 
     @Test

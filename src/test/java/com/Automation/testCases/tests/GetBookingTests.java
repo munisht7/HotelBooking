@@ -48,11 +48,11 @@ public class GetBookingTests {
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(200, getresponse.getStatusCode());
-        assertNotNull(getresponse.path("firstname"));
-        assertNotNull(getresponse.path("lastname"));
-        assertNotNull(getresponse.path("totalprice"));
-        assertNotNull(getresponse.path("depositpaid"));
-        assertNotNull(getresponse.path("bookingdates"));
+        assertEquals(createBookingRequest.getFirstname(),getresponse.path("firstname"));
+        assertEquals(createBookingRequest.getLastname(),getresponse.path("lastname"));
+        assertEquals(createBookingRequest.getTotalprice(),getresponse.path("totalprice"));
+        assertEquals(createBookingRequest.getDepositpaid(),getresponse.path("depositpaid"));
+        assertEquals(createBookingRequest.getBookingdates(),getresponse.path("bookingdates"));
     }
     @Test
     @DisplayName("validating the Get Booking with two parameters")

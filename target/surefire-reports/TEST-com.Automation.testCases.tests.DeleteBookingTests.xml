@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.Automation.testCases.tests.DeleteBookingTests" time="10.26" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.Automation.testCases.tests.DeleteBookingTests" time="10.931" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="NL"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/20.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/Munish.Thakur/IdeaProjects/HotelBooking/target/surefire/surefirebooter-20230704134523405_3.jar /Users/Munish.Thakur/IdeaProjects/HotelBooking/target/surefire 2023-07-04T13-45-23_341-jvmRun1 surefire-20230704134523405_1tmp surefire_0-20230704134523405_2tmp"/>
+    <property name="sun.java.command" value="/Users/Munish.Thakur/IdeaProjects/HotelBooking/target/surefire/surefirebooter-20230711111447054_3.jar /Users/Munish.Thakur/IdeaProjects/HotelBooking/target/surefire 2023-07-11T11-14-46_983-jvmRun1 surefire-20230711111447054_1tmp surefire_0-20230711111447054_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/Munish.Thakur/IdeaProjects/HotelBooking/target/test-classes:/Users/Munish.Thakur/IdeaProjects/HotelBooking/target/classes:/Users/Munish.Thakur/.m2/repository/org/slf4j/slf4j-simple/2.0.7/slf4j-simple-2.0.7.jar:/Users/Munish.Thakur/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/Users/Munish.Thakur/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.2/jackson-dataformat-yaml-2.15.2.jar:/Users/Munish.Thakur/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar:/Users/Munish.Thakur/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/Munish.Thakur/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/Munish.Thakur/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/Munish.Thakur/.m2/repository/io/rest-assured/rest-assured/5.3.1/rest-assured-5.3.1.jar:/Users/Munish.Thakur/.m2/repository/org/apache/groovy/groovy/4.0.11/groovy-4.0.11.jar:/Users/Munish.Thakur/.m2/repository/org/apache/groovy/groovy-xml/4.0.11/groovy-xml-4.0.11.jar:/Users/Munish.Thakur/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/Munish.Thakur/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/Munish.Thakur/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/Munish.Thakur/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/Munish.Thakur/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/Munish.Thakur/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/Munish.Thakur/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/Munish.Thakur/.m2/repository/io/rest-assured/json-path/5.3.1/json-path-5.3.1.jar:/Users/Munish.Thakur/.m2/repository/org/apache/groovy/groovy-json/4.0.11/groovy-json-4.0.11.jar:/Users/Munish.Thakur/.m2/repository/io/rest-assured/rest-assured-common/5.3.1/rest-assured-common-5.3.1.jar:/Users/Munish.Thakur/.m2/repository/io/rest-assured/xml-path/5.3.1/xml-path-5.3.1.jar:/Users/Munish.Thakur/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/Munish.Thakur/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/Munish.Thakur/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/Munish.Thakur/.m2/repository/com/tngtech/java/junit-dataprovider/1.11.0/junit-dataprovider-1.11.0.jar:/Users/Munish.Thakur/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/Munish.Thakur/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/Munish.Thakur/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/Munish.Thakur/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:"/>
@@ -30,12 +30,12 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/Munish.Thakur/IdeaProjects/HotelBooking/target/surefire/surefirebooter-20230704134523405_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/Munish.Thakur/IdeaProjects/HotelBooking/target/surefire/surefirebooter-20230711111447054_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="20.0.1"/>
     <property name="user.name" value="Munish.Thakur"/>
-    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="stdout.encoding" value="US-ASCII"/>
     <property name="path.separator" value=":"/>
     <property name="os.version" value="13.4.1"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -49,17 +49,17 @@
     <property name="user.dir" value="/Users/Munish.Thakur/IdeaProjects/HotelBooking"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="native.encoding" value="UTF-8"/>
+    <property name="native.encoding" value="US-ASCII"/>
     <property name="java.library.path" value="/Users/Munish.Thakur/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="stderr.encoding" value="US-ASCII"/>
     <property name="java.vendor" value="Homebrew"/>
     <property name="java.vm.version" value="20.0.1"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="64.0"/>
   </properties>
-  <testcase name="deleteBookingWIthoutAuthToken[0: com.Automation.model.CreateBookingRequest@446a1e84]" classname="com.Automation.testCases.tests.DeleteBookingTests" time="1.629">
+  <testcase name="deleteBookingWIthoutAuthToken[0: com.Automation.model.CreateBookingRequest@446a1e84]" classname="com.Automation.testCases.tests.DeleteBookingTests" time="1.199">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
@@ -84,7 +84,7 @@ Body:
     "additionalneeds": "Breakfast"
 }
 Request method:	DELETE
-Request URI:	https://restful-booker.herokuapp.com/booking/1957
+Request URI:	https://restful-booker.herokuapp.com/booking/1422
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -99,7 +99,7 @@ Body:			<none>
     <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.DeleteBookingTests - ASSERTING THE API RESPONSE
 ]]></system-err>
   </testcase>
-  <testcase name="deleteBookingWIthoutAuthToken[1: com.Automation.model.CreateBookingRequest@4f0f2942]" classname="com.Automation.testCases.tests.DeleteBookingTests" time="1.629">
+  <testcase name="deleteBookingWIthoutAuthToken[1: com.Automation.model.CreateBookingRequest@4f0f2942]" classname="com.Automation.testCases.tests.DeleteBookingTests" time="1.24">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
@@ -124,7 +124,7 @@ Body:
     "additionalneeds": "Breakfast"
 }
 Request method:	DELETE
-Request URI:	https://restful-booker.herokuapp.com/booking/1968
+Request URI:	https://restful-booker.herokuapp.com/booking/1436
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -139,7 +139,7 @@ Body:			<none>
     <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.DeleteBookingTests - ASSERTING THE API RESPONSE
 ]]></system-err>
   </testcase>
-  <testcase name="deleteBookingWIthoutAuthToken[2: com.Automation.model.CreateBookingRequest@2657d4dd]" classname="com.Automation.testCases.tests.DeleteBookingTests" time="1.486">
+  <testcase name="deleteBookingWIthoutAuthToken[2: com.Automation.model.CreateBookingRequest@2657d4dd]" classname="com.Automation.testCases.tests.DeleteBookingTests" time="1.25">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
@@ -164,7 +164,7 @@ Body:
     "additionalneeds": "Breakfast"
 }
 Request method:	DELETE
-Request URI:	https://restful-booker.herokuapp.com/booking/1991
+Request URI:	https://restful-booker.herokuapp.com/booking/1449
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -179,7 +179,7 @@ Body:			<none>
     <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.DeleteBookingTests - ASSERTING THE API RESPONSE
 ]]></system-err>
   </testcase>
-  <testcase name="deleteBookingTest[0: com.Automation.model.CreateBookingRequest@5340477f]" classname="com.Automation.testCases.tests.DeleteBookingTests" time="1.958">
+  <testcase name="deleteBookingTest[0: com.Automation.model.CreateBookingRequest@5340477f]" classname="com.Automation.testCases.tests.DeleteBookingTests" time="2.37">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
@@ -220,23 +220,38 @@ Body:
     "password": "password123"
 }
 Request method:	DELETE
-Request URI:	https://restful-booker.herokuapp.com/booking/2012
+Request URI:	https://restful-booker.herokuapp.com/booking/1455
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		cookie=token=d3dcb5f1341fa1c
+Headers:		cookie=token=236e11078f162f2
 				accept=application/json
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
+Request method:	GET
+Request URI:	https://restful-booker.herokuapp.com/booking/1455
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		cookie=token=236e11078f162f2
+				accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Not Found
 ]]></system-out>
     <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.DeleteBookingTests - ASSERTING THE API RESPONSE
+[main] INFO com.Automation.testCases.tests.DeleteBookingTests - ASSERTING THE API RESPONSE
 ]]></system-err>
   </testcase>
-  <testcase name="deleteBookingTest[1: com.Automation.model.CreateBookingRequest@47caedad]" classname="com.Automation.testCases.tests.DeleteBookingTests" time="1.778">
+  <testcase name="deleteBookingTest[1: com.Automation.model.CreateBookingRequest@47caedad]" classname="com.Automation.testCases.tests.DeleteBookingTests" time="2.418">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
@@ -277,23 +292,38 @@ Body:
     "password": "password123"
 }
 Request method:	DELETE
-Request URI:	https://restful-booker.herokuapp.com/booking/2040
+Request URI:	https://restful-booker.herokuapp.com/booking/1476
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		cookie=token=6b2b1c253bd7af4
+Headers:		cookie=token=72288282c6221c6
 				accept=application/json
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
+Request method:	GET
+Request URI:	https://restful-booker.herokuapp.com/booking/1476
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		cookie=token=72288282c6221c6
+				accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Not Found
 ]]></system-out>
     <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.DeleteBookingTests - ASSERTING THE API RESPONSE
+[main] INFO com.Automation.testCases.tests.DeleteBookingTests - ASSERTING THE API RESPONSE
 ]]></system-err>
   </testcase>
-  <testcase name="deleteBookingTest[2: com.Automation.model.CreateBookingRequest@7139992f]" classname="com.Automation.testCases.tests.DeleteBookingTests" time="1.774">
+  <testcase name="deleteBookingTest[2: com.Automation.model.CreateBookingRequest@7139992f]" classname="com.Automation.testCases.tests.DeleteBookingTests" time="2.451">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
@@ -334,20 +364,35 @@ Body:
     "password": "password123"
 }
 Request method:	DELETE
-Request URI:	https://restful-booker.herokuapp.com/booking/2069
+Request URI:	https://restful-booker.herokuapp.com/booking/1502
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		cookie=token=9ebd3fb6f069d3f
+Headers:		cookie=token=f5c73a4ac55db97
 				accept=application/json
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
+Request method:	GET
+Request URI:	https://restful-booker.herokuapp.com/booking/1502
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		cookie=token=f5c73a4ac55db97
+				accept=application/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Not Found
 ]]></system-out>
     <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.DeleteBookingTests - ASSERTING THE API RESPONSE
+[main] INFO com.Automation.testCases.tests.DeleteBookingTests - ASSERTING THE API RESPONSE
 ]]></system-err>
   </testcase>
 </testsuite>

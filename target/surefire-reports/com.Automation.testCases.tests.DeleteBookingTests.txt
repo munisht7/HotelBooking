@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.Automation.testCases.tests.DeleteBookingTests
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.26 s - in com.Automation.testCases.tests.DeleteBookingTests
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.931 s - in com.Automation.testCases.tests.DeleteBookingTests
