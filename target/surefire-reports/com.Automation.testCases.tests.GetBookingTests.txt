@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.Automation.testCases.tests.GetBookingTests
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.596 s - in com.Automation.testCases.tests.GetBookingTests
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.88 s - in com.Automation.testCases.tests.GetBookingTests
