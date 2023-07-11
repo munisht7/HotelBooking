@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.Automation.testCases.tests.GetBookingTests" time="9.88" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.Automation.testCases.tests.CreateBookingTests" time="5.688" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -59,60 +59,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="64.0"/>
   </properties>
-  <testcase name="getBookingDetailsWithoutFilter" classname="com.Automation.testCases.tests.GetBookingTests" time="1.754">
-    <system-out><![CDATA[Request method:	GET
-Request URI:	https://restful-booker.herokuapp.com/booking
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-]]></system-out>
-    <system-err><![CDATA[[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/PartialUpdateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/PartialUpdateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/PartialUpdateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/PartialUpdateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.base.BaseClassProvider - LOADING DATA FROM YAML FILE
-[main] INFO com.Automation.base.BaseClassProvider - src/test/resources/tests_data/CreateBookingCreationData.yaml
-[main] INFO com.Automation.testCases.tests.GetBookingTests - ASSERTING THE API RESPONSE
-]]></system-err>
-  </testcase>
-  <testcase name="checkingOtherHeaderTypes[0: com.Automation.model.CreateBookingRequest@29d80d2b]" classname="com.Automation.testCases.tests.GetBookingTests" time="1.212">
+  <testcase name="createBookingTest[0: com.Automation.model.CreateBookingRequest@57db2b13]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.844">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
@@ -136,23 +83,11 @@ Body:
     "depositpaid": true,
     "additionalneeds": "Breakfast"
 }
-Request method:	GET
-Request URI:	https://restful-booker.herokuapp.com/booking/2338
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		accept=application/javascript
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
 ]]></system-out>
-    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.GetBookingTests - ASSERTING THE API RESPONSE
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
 ]]></system-err>
   </testcase>
-  <testcase name="checkingOtherHeaderTypes[1: com.Automation.model.CreateBookingRequest@58e1d9d]" classname="com.Automation.testCases.tests.GetBookingTests" time="1.338">
+  <testcase name="createBookingTest[1: com.Automation.model.CreateBookingRequest@475c9c31]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.628">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
@@ -176,23 +111,11 @@ Body:
     "depositpaid": true,
     "additionalneeds": "Breakfast"
 }
-Request method:	GET
-Request URI:	https://restful-booker.herokuapp.com/booking/2352
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		accept=application/javascript
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
 ]]></system-out>
-    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.GetBookingTests - ASSERTING THE API RESPONSE
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
 ]]></system-err>
   </testcase>
-  <testcase name="checkingOtherHeaderTypes[2: com.Automation.model.CreateBookingRequest@446a1e84]" classname="com.Automation.testCases.tests.GetBookingTests" time="1.229">
+  <testcase name="createBookingTest[2: com.Automation.model.CreateBookingRequest@5c86a017]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.625">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
@@ -216,8 +139,13 @@ Body:
     "depositpaid": false,
     "additionalneeds": "Breakfast"
 }
-Request method:	GET
-Request URI:	https://restful-booker.herokuapp.com/booking/2366
+]]></system-out>
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
+]]></system-err>
+  </testcase>
+  <testcase name="createBookingWithOtherHeaderTypes[0: com.Automation.model.CreateBookingRequest@5c7bfdc1]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.637">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -227,30 +155,79 @@ Headers:		accept=application/javascript
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
-Body:			<none>
+Body:
+{
+    "firstname": "Peter",
+    "bookingdates": {
+        "checkin": "2015-01-01",
+        "checkout": "2019-01-01"
+    },
+    "lastname": "Jenson",
+    "totalprice": 150,
+    "depositpaid": true,
+    "additionalneeds": "Breakfast"
+}
 ]]></system-out>
-    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.GetBookingTests - ASSERTING THE API RESPONSE
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
 ]]></system-err>
   </testcase>
-  <testcase name="getBookingDetailsWithFirstNameAndLastName" classname="com.Automation.testCases.tests.GetBookingTests" time="0.608">
-    <system-out><![CDATA[Request method:	GET
-Request URI:	https://restful-booker.herokuapp.com/booking?firstname=Josh&lastname=Allen
+  <testcase name="createBookingWithOtherHeaderTypes[1: com.Automation.model.CreateBookingRequest@5276d6ee]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.607">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
 Request params:	<none>
-Query params:	firstname=Josh
-				lastname=Allen
+Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		accept=application/json
+Headers:		accept=application/javascript
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
-Body:			<none>
+Body:
+{
+    "firstname": "Peter",
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2021-01-01"
+    },
+    "lastname": "Jenson",
+    "totalprice": 1000,
+    "depositpaid": true,
+    "additionalneeds": "Breakfast"
+}
 ]]></system-out>
-    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.GetBookingTests - ASSERTING THE API RESPONSE
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
 ]]></system-err>
   </testcase>
-  <testcase name="getBookingDetailsWithParameter[0: com.Automation.model.CreateBookingRequest@4f0f2942]" classname="com.Automation.testCases.tests.GetBookingTests" time="1.306">
+  <testcase name="createBookingWithOtherHeaderTypes[2: com.Automation.model.CreateBookingRequest@71687585]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.602">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		accept=application/javascript
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Peter",
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2023-01-01"
+    },
+    "lastname": "Jenson",
+    "totalprice": 1,
+    "depositpaid": false,
+    "additionalneeds": "Breakfast"
+}
+]]></system-out>
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
+]]></system-err>
+  </testcase>
+  <testcase name="createBookingTestWithNullDepositPaid[0: com.Automation.model.CreateBookingRequest@1807f5a7]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.59">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
@@ -271,26 +248,14 @@ Body:
     },
     "lastname": "Jenson",
     "totalprice": 150,
-    "depositpaid": true,
+    "depositpaid": null,
     "additionalneeds": "Breakfast"
 }
-Request method:	GET
-Request URI:	https://restful-booker.herokuapp.com/booking/2378
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
 ]]></system-out>
-    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.GetBookingTests - ASSERTING THE API RESPONSE
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
 ]]></system-err>
   </testcase>
-  <testcase name="getBookingDetailsWithParameter[1: com.Automation.model.CreateBookingRequest@2657d4dd]" classname="com.Automation.testCases.tests.GetBookingTests" time="1.233">
+  <testcase name="createBookingTestWithNullDepositPaid[1: com.Automation.model.CreateBookingRequest@1b919693]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.568">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
@@ -311,26 +276,14 @@ Body:
     },
     "lastname": "Jenson",
     "totalprice": 1000,
-    "depositpaid": true,
+    "depositpaid": null,
     "additionalneeds": "Breakfast"
 }
-Request method:	GET
-Request URI:	https://restful-booker.herokuapp.com/booking/2390
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
 ]]></system-out>
-    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.GetBookingTests - ASSERTING THE API RESPONSE
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
 ]]></system-err>
   </testcase>
-  <testcase name="getBookingDetailsWithParameter[2: com.Automation.model.CreateBookingRequest@5340477f]" classname="com.Automation.testCases.tests.GetBookingTests" time="1.192">
+  <testcase name="createBookingTestWithNullDepositPaid[2: com.Automation.model.CreateBookingRequest@7fb4f2a9]" classname="com.Automation.testCases.tests.CreateBookingTests" time="0.584">
     <system-out><![CDATA[Request method:	POST
 Request URI:	https://restful-booker.herokuapp.com/booking
 Proxy:			<none>
@@ -351,23 +304,11 @@ Body:
     },
     "lastname": "Jenson",
     "totalprice": 1,
-    "depositpaid": false,
+    "depositpaid": null,
     "additionalneeds": "Breakfast"
 }
-Request method:	GET
-Request URI:	https://restful-booker.herokuapp.com/booking/2404
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		accept=application/json
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
 ]]></system-out>
-    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.GetBookingTests - ASSERTING THE API RESPONSE
+    <system-err><![CDATA[[main] INFO com.Automation.testCases.tests.CreateBookingTests - ASSERTING THE API RESPONSE
 ]]></system-err>
   </testcase>
 </testsuite>

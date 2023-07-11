@@ -60,6 +60,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+
     <reporting>
         <plugins>
             <plugin>
@@ -70,10 +71,22 @@
         </plugins>
     </reporting>
 
-   <build>
-  <testSourceDirectory>src/test/java</testSourceDirectory>
-  <!-- other build configuration -->
-  </build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.2</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <file>src/test/resources/junit.xml</file>
+                    </suiteXmlFiles>
+                    <properties/>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 
 
 </project>
