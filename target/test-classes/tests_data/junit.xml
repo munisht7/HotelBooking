@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="tests suite">
+    <test name="Automation">
+        <classes>
+            <class name="com.Automation.testCases.tests.CreateBookingTests"/>
+            <class name="com.Automation.testCases.tests.GetBookingTests"/>
+            <class name="com.Automation.testCases.tests.DeleteBookingTests"/>
+            <class name="com.Automation.testCases.tests.PartialUpdateBookingTests"/>
+            <!--             <class name="com.Automation.testCases.tests.uiAutomation.HomePageTests"/> -->
+        </classes>
+    </test>
+</suite>
