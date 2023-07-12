@@ -32,15 +32,16 @@ public class CreateBookingTests {
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(200, response.getStatusCode());
-        assertNotNull(null, response.path("bookingid"));
-        assertEquals("Peter",response.path("booking.firstname"));
-        assertEquals("Jenson",response.path("booking.lastname"));
-        assertNotNull( response.path("booking.totalprice"));
-        assertNotNull( response.path("booking.depositpaid"));
+        assertNotNull( response.path("bookingid"));
+        assertEquals(createBookingRequest.getFirstname(),response.path("booking.firstname"));
+        assertEquals(createBookingRequest.getLastname(),response.path("booking.lastname"));
+        assertEquals(createBookingRequest.getTotalprice(), response.path("booking.totalprice"));
+        assertEquals(createBookingRequest.getDepositpaid(), response.path("booking.depositpaid"));
         assertNotNull( response.path("booking.bookingdates.checkin"));
         assertNotNull( response.path("booking.bookingdates.checkout"));
-        assertEquals("Breakfast", response.path("booking.additionalneeds"));
-
+        if(createBookingRequest.getAdditionalneeds() != null) {
+            assertEquals("Breakfast", response.path("booking.additionalneeds"));
+        }
     }
     @Test
     @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class)

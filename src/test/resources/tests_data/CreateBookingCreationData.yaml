@@ -1,4 +1,4 @@
-# depostId as true and total price as 150
+# depostId as true and total price as 150 and additional needs as Lunch
 - firstname: Peter
   lastname: Jenson
   totalprice: 150
@@ -6,17 +6,17 @@
   bookingdates:
     checkin : 2015-01-01
     checkout : 2019-01-01
-  additionalneeds: Breakfast
+  additionalneeds: Dinner
 
-# depostId as true and total price as 1000
+# depostId as true and total price as 1000 and additional needs as Lunch
 - firstname: Peter
   lastname: Jenson
-  totalprice: 1000
+  totalprice: 10
   depositpaid: true
   bookingdates:
     checkin : 2018-01-01
     checkout : 2021-01-01
-  additionalneeds: Breakfast
+  additionalneeds: Lunch
 
 # depostId as false and total price as 1
 - firstname: Peter
@@ -26,4 +26,23 @@
   bookingdates:
     checkin : 2018-01-01
     checkout : 2023-01-01
-  additionalneeds: Breakfast 
+  additionalneeds: Breakfast
+
+# check in and check out dates as future
+- firstname: Peter
+  lastname: Jenson
+  totalprice: 100
+  depositpaid: true
+  bookingdates:
+    checkin : 2024-01-01
+    checkout : 2024-01-01
+  additionalneeds: Breakfast
+
+# without additional needs
+- firstname: Peter
+  lastname: Jenson
+  totalprice: 100
+  depositpaid: true
+  bookingdates:
+    checkin : 2024-01-01
+    checkout : 2024-01-01
