@@ -17,10 +17,6 @@ public class BookingController {
             return baseSetUp.postApi(url, createBookingRequest, "application/json",headerParam);
     }
 
-//    public Response putBooking(CreateBookingRequest createBookingRequest, HashMap<String, String> headerParam) {
-//        final String url = configReader.getApplicationUrl() + EndPoint.BOOKING_DETAILS.UPDATE_BOOKING;
-//        return baseSetUp.putApi(url, createBookingRequest, "application/json",headerParam);
-//    }
         public Response postAuth(String requestBody)  {
             final String url = configReader.getApplicationUrl() + EndPoint.BOOKING_DETAILS.AUTH_BOOKING;
             return baseSetUp.postApiForAuth(url, requestBody, "application/json");

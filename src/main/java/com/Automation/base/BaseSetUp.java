@@ -19,18 +19,6 @@ public class BaseSetUp {
         return response;
     }
 
-//    public Response putApi(String url, CreateBookingRequest requestbody, String contentType, HashMap<String, ? extends Object> headerParameters) {
-//        response= given().contentType(contentType).
-//                body(requestbody).
-//                headers(headerParameters).
-//                when().
-//                log().all().
-//                put(url).
-//                then().
-//                extract().response();
-//        return response;
-//    }
-
     public Response postApiForAuth(String url, String requestbody, String contentType) {
         response= given().contentType(contentType).
                 body(requestbody).

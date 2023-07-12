@@ -23,9 +23,8 @@ public class UpdateBookingTests {
     private static final Logger LOG = LoggerFactory.getLogger(UpdateBookingTests.class);
     BookingController bookingController = new BookingController();
     GetAuth getAuth = new GetAuth();
-
     CreateBooking createBooking= new CreateBooking();
-
+    
     @Test
     @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class)
     @DisplayName("Create a new booking with different set of data ")
@@ -37,18 +36,18 @@ public class UpdateBookingTests {
         headerValue.put("content-type","application/json");
         headerValue.put("cookie", "token="+getAuth.getAuth());
 
-        Response putresponse = bookingController.putBooking(createBookingRequest,headerValue,createBooking.getBookingId());
+        Response response = bookingController.putBooking(createBookingRequest,headerValue,createBooking.getBookingId());
 
         LOG.info("ASSERTING THE API RESPONSE");
-        assertEquals(200, putresponse.getStatusCode());
-        assertEquals(createBookingRequest.getFirstname(),putresponse.path("firstname"));
-        assertEquals(createBookingRequest.getLastname(),putresponse.path("lastname"));
-        assertEquals(createBookingRequest.getTotalprice(), putresponse.path("totalprice"));
-        assertEquals(createBookingRequest.getDepositpaid(), putresponse.path("depositpaid"));
-        assertNotNull(putresponse.path("bookingdates.checkin"));
-        assertNotNull(putresponse.path("bookingdates.checkout"));
+        assertEquals(200, response.getStatusCode());
+        assertEquals(createBookingRequest.getFirstname(),response.path("firstname"));
+        assertEquals(createBookingRequest.getLastname(),response.path("lastname"));
+        assertEquals(createBookingRequest.getTotalprice(), response.path("totalprice"));
+        assertEquals(createBookingRequest.getDepositpaid(), response.path("depositpaid"));
+        assertNotNull(response.path("bookingdates.checkin"));
+        assertNotNull(response.path("bookingdates.checkout"));
         if(createBookingRequest.getAdditionalneeds() != null) {
-            assertEquals(createBookingRequest.getAdditionalneeds(), putresponse.path("additionalneeds"));
+            assertEquals(createBookingRequest.getAdditionalneeds(), response.path("additionalneeds"));
         }
     }
 
@@ -62,11 +61,11 @@ public class UpdateBookingTests {
         headerValue.put("accept","application/javascript");
         headerValue.put("cookie", "token="+getAuth.getAuth());
 
-        Response putresponse = bookingController.putBooking(createBookingRequest,headerValue,createBooking.getBookingId());
+        Response response = bookingController.putBooking(createBookingRequest,headerValue,createBooking.getBookingId());
 
         LOG.info("ASSERTING THE API RESPONSE");
-        assertEquals(418, putresponse.getStatusCode());
-        assertEquals("I'm a Teapot", putresponse.body().print());
+        assertEquals(418, response.getStatusCode());
+        assertEquals("I'm a Teapot", response.body().print());
     }
 
 
@@ -82,9 +81,9 @@ public class UpdateBookingTests {
         headerValue.put("content-type","application/json");
         headerValue.put("cookie", "token="+getAuth.getAuth());
 
-        Response putresponse = bookingController.putBooking(createBookingRequest,headerValue,createBooking.getBookingId());
+        Response response = bookingController.putBooking(createBookingRequest,headerValue,createBooking.getBookingId());
         LOG.info("ASSERTING THE API RESPONSE");
-        assertEquals(400, putresponse.getStatusCode());
-        assertEquals("Bad Request", putresponse.body().print());
+        assertEquals(400, response.getStatusCode());
+        assertEquals("Bad Request", response.body().print());
     }
 }
