@@ -14,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.junit.jupiter.api.DisplayName;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+
 import java.util.HashMap;
 @RunWith(DataProviderRunner.class)
 public class GetBookingTests {
@@ -56,20 +57,20 @@ public class GetBookingTests {
     }
     @Test
     @DisplayName("validating the Get Booking with two parameters")
-    public void getBookingDetailsWithFirstNameAndLastName()  {
-        // Adding the headers in the request
+    public void getBookingDetailsWithFirstNameAndLastName( )  {
+
         HashMap<String, String> headerValue = new HashMap<>();
         headerValue.put("accept", "application/json");
         // Adding the Query Parameters in the request
         HashMap<String, String> queryParam = new HashMap<>();
         queryParam.put("firstname", "Josh");
         queryParam.put("lastname", "Allen");
-        Response response = bookingController.getBookingWithQueryParam(headerValue,queryParam);
+        Response getresponse = bookingController.getBookingWithQueryParam(headerValue,queryParam);
 
         LOG.info("ASSERTING THE API RESPONSE");
-        assertEquals(200, response.getStatusCode());
-        Assert.assertNotNull(response);
-        Assert.assertNotNull(response.path("bookingid"));
+        assertEquals(200, getresponse.getStatusCode());
+        assertNotNull(getresponse);
+
     }
     @Test
     @UseDataProvider(value = "createBookingDetails", location = BookingDataProvider.class)

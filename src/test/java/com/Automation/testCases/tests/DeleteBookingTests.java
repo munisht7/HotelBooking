@@ -38,7 +38,7 @@ public class DeleteBookingTests {
         assertEquals(201, deleteResponse.getStatusCode());
         // checking the get response to validate that the deleted booking is not fetched
         Response getresponse = bookingController.getBookingWithPathParam(headerValue,response.path("bookingid"));
-        LOG.info("ASSERTING THE API RESPONSE");
+        LOG.info("ASSERTING 404 TO CHECK THAT DELETED BOOKING IS NOT BEING FETCHED");
         assertEquals(404, getresponse.getStatusCode());
         assertEquals("Not Found", getresponse.body().print());
     }
