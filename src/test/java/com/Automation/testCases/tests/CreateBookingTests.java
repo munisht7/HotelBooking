@@ -32,7 +32,7 @@ public class CreateBookingTests {
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(200, response.getStatusCode());
-        assertNotNull( response.path("bookingid"));
+        assertNotNull(response.path("bookingid"));
         assertEquals(createBookingRequest.getFirstname(),response.path("booking.firstname"));
         assertEquals(createBookingRequest.getLastname(),response.path("booking.lastname"));
         assertEquals(createBookingRequest.getTotalprice(), response.path("booking.totalprice"));
@@ -40,7 +40,7 @@ public class CreateBookingTests {
         assertNotNull( response.path("booking.bookingdates.checkin"));
         assertNotNull( response.path("booking.bookingdates.checkout"));
         if(createBookingRequest.getAdditionalneeds() != null) {
-            assertEquals("Breakfast", response.path("booking.additionalneeds"));
+            assertEquals(createBookingRequest.getAdditionalneeds(), response.path("booking.additionalneeds"));
         }
     }
     @Test
@@ -57,16 +57,14 @@ public class CreateBookingTests {
         assertEquals(418, response.getStatusCode());
     }
     @Test
-    @UseDataProvider(value = "createBookingDetails", location =BookingDataProvider.class)
-    @DisplayName("Checking the response for 500 ")
-    public void createBookingTestWithNullDepositPaid(Object CreateRequest){
+    @UseDataProvider(value = "createBookingDetailsForInternalServerErrors", location =BookingDataProvider.class)
+    @DisplayName("Checking the response for 500")
+    public void createBookingTestWithoutMandatoryFields(Object CreateRequest){
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
-        createBookingRequest.setDepositpaid(null);
         HashMap<String, String> headerValue= new HashMap<>();
         headerValue.put("accept","application/json");
         Response response = bookingController.postBooking(createBookingRequest,headerValue);
-
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(500, response.getStatusCode());
     }

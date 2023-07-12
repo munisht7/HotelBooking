@@ -32,12 +32,11 @@ public class DeleteBookingTests {
         Response response = bookingController.postBooking(createBookingRequest,headerValue);
         // Adding a cookie header for the auth
         headerValue.put("cookie", "token="+getAuth.getAuth());
-        //        Make a request for Delete API
+        // Make a request for Delete API
         Response deleteResponse= bookingController.deleteBooking(headerValue,response.path("bookingid"));
-
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(201, deleteResponse.getStatusCode());
-
+        // checking the get response to validate that the deleted booking is not fetched
         Response getresponse = bookingController.getBookingWithPathParam(headerValue,response.path("bookingid"));
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(404, getresponse.getStatusCode());
@@ -53,7 +52,7 @@ public class DeleteBookingTests {
         headerValue.put("accept","application/json");
         // Create a bookingId and get the bookingId from the response and pass it in the delete Api request
         Response response = bookingController.postBooking(createBookingRequest,headerValue);
-        //        Make a request for Delete API
+        //Make a request for Delete API
         Response deleteResponse= bookingController.deleteBooking(headerValue,response.path("bookingid"));
 
         LOG.info("ASSERTING THE API RESPONSE");

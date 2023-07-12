@@ -1,2 +1,9 @@
+# update both first and last name
 - firstname: Amanda
-  lastname: Amanda
+  lastname: Heather
+
+# update just first name
+- firstname: Peter
+
+# update just last name
+- lastname: Brown

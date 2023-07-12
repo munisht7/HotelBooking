@@ -26,7 +26,7 @@ public class PartialUpdateBookingTests {
     @Test
     @UseDataProvider(value ="updateBookingDetails" , location = BookingDataProvider.class)
     @DisplayName("Updating the first and last name")
-    public void updateFirstAndLastName(Object UpdateRequest) throws Exception {
+    public void updateFirstOrLastName(Object UpdateRequest)  {
         PartialUpdateBookingRequest partialUpdateBookingRequest = PartialUpdateBookingRequest.class.cast(UpdateRequest);
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
@@ -36,15 +36,19 @@ public class PartialUpdateBookingTests {
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(200, response.getStatusCode());
-        assertEquals("Amanda",response.path("firstname"));
-        assertEquals("Amanda",response.path("lastname"));
+        if(partialUpdateBookingRequest.getFirstname()!= null){
+            assertEquals(partialUpdateBookingRequest.getFirstname(), response.path("firstname"));
+        }
+        if(partialUpdateBookingRequest.getLastname() != null){
+            assertEquals(partialUpdateBookingRequest.getLastname(), response.path("lastname"));
+        }
         assertNotNull(response.path("totalprice"));
     }
 
     @Test
     @UseDataProvider(value ="updateBookingDetails" , location = BookingDataProvider.class)
     @DisplayName("Update Fail without Auth Token")
-    public void updateFailWithoutAuthToken(Object UpdateRequest) throws Exception {
+    public void updateFailWithoutAuthToken(Object UpdateRequest) {
         PartialUpdateBookingRequest partialUpdateBookingRequest = PartialUpdateBookingRequest.class.cast(UpdateRequest);
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();

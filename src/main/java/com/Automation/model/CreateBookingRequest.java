@@ -1,10 +1,9 @@
 package com.Automation.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-public class
-CreateBookingRequest {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class CreateBookingRequest {
     @JsonProperty("firstname")
     private String firstname;
     public Object getBookingdates() {
@@ -51,7 +50,7 @@ CreateBookingRequest {
     }
     @JsonProperty("depositpaid")
     private Boolean depositpaid;
-    @JsonIgnore
+
     @JsonProperty("additionalneeds")
     private String additionalneeds;
 }
