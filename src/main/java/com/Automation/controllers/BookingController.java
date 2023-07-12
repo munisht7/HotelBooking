@@ -3,7 +3,6 @@ package com.Automation.controllers;
 import com.Automation.base.BaseSetUp;
 import com.Automation.constants.EndPoint;
 import com.Automation.model.CreateBookingRequest;
-import com.Automation.model.PartialUpdateBookingRequest;
 import com.Automation.util.ConfigReader;
 import io.restassured.response.Response;
 import java.util.HashMap;
@@ -26,9 +25,9 @@ public class BookingController {
         final String url = configReader.getApplicationUrl() + EndPoint.BOOKING_DETAILS.CREATE_BOOKING;
         return baseSetUp.postApiForBookingId(url, requestBody, "application/json");
     }
-        public Response patchBooking(PartialUpdateBookingRequest partialUpdateBookingRequest, HashMap<String, String> headerParam, Integer Param)  {
+        public Response patchBooking(CreateBookingRequest createBookingRequest, HashMap<String, String> headerParam, Integer Param)  {
             final String url = configReader.getApplicationUrl() + EndPoint.BOOKING_DETAILS.UPDATE_BOOKING;
-            return baseSetUp.patchApiWithPathParam(url, partialUpdateBookingRequest, "application/json",headerParam,Param);
+            return baseSetUp.patchApiWithPathParam(url, createBookingRequest, "application/json",headerParam,Param);
     }
         public Response getBookingWithQueryParam( HashMap<String, String> headerParam,HashMap<String,String> queryParam) {
             final String url = configReader.getApplicationUrl() + EndPoint.BOOKING_DETAILS.GET_BOOKING;

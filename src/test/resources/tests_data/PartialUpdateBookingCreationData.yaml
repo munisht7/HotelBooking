@@ -7,3 +7,17 @@
 
 # update just last name
 - lastname: Brown
+
+# update just totalprice
+- totalprice: 120
+
+# update just totalprice
+- depositpaid: false
+
+# update just totalprice
+- additionalneeds: lemon juice
+
+# update just bookingdates
+- bookingdates:
+    checkin: 2024-01-01
+    checkout: 2024-01-01
