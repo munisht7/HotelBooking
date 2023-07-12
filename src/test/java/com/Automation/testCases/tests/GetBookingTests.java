@@ -14,7 +14,6 @@ import org.slf4j.LoggerFactory;
 import org.junit.jupiter.api.DisplayName;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
 import java.util.HashMap;
 @RunWith(DataProviderRunner.class)
 public class GetBookingTests {
@@ -37,7 +36,7 @@ public class GetBookingTests {
     @Test
     @UseDataProvider(value = "createBookingDetails", location = BookingDataProvider.class)
     @DisplayName("validating the Get Booking with one parameter")
-    public void getBookingDetailsWithParameter(Object CreateRequest)  {
+    public void getBookingDetailsWithParameter(Object CreateRequest){
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
@@ -57,7 +56,7 @@ public class GetBookingTests {
     }
     @Test
     @DisplayName("validating the Get Booking with two parameters")
-    public void getBookingDetailsWithFirstNameAndLastName( )  {
+    public void getBookingDetailsWithFirstNameAndLastName(){
 
         HashMap<String, String> headerValue = new HashMap<>();
         headerValue.put("accept", "application/json");

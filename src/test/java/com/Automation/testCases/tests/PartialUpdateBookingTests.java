@@ -14,7 +14,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
 import java.util.HashMap;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 @RunWith(DataProviderRunner.class)
@@ -53,8 +52,8 @@ public class PartialUpdateBookingTests {
             assertEquals(createBookingRequest.getDepositpaid(), response.path("depositpaid"));
         }
         if(createBookingRequest.getBookingdates() != null){
-            assertNotNull( response.path("bookingdates.checkin"));
-            assertNotNull( response.path("bookingdates.checkout"));
+            assertNotNull(response.path("bookingdates.checkin"));
+            assertNotNull(response.path("bookingdates.checkout"));
         }
     }
 

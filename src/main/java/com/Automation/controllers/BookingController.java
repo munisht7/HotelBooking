@@ -16,6 +16,11 @@ public class BookingController {
             final String url = configReader.getApplicationUrl() + EndPoint.BOOKING_DETAILS.CREATE_BOOKING;
             return baseSetUp.postApi(url, createBookingRequest, "application/json",headerParam);
     }
+
+//    public Response putBooking(CreateBookingRequest createBookingRequest, HashMap<String, String> headerParam) {
+//        final String url = configReader.getApplicationUrl() + EndPoint.BOOKING_DETAILS.UPDATE_BOOKING;
+//        return baseSetUp.putApi(url, createBookingRequest, "application/json",headerParam);
+//    }
         public Response postAuth(String requestBody)  {
             final String url = configReader.getApplicationUrl() + EndPoint.BOOKING_DETAILS.AUTH_BOOKING;
             return baseSetUp.postApiForAuth(url, requestBody, "application/json");
@@ -28,6 +33,11 @@ public class BookingController {
         public Response patchBooking(CreateBookingRequest createBookingRequest, HashMap<String, String> headerParam, Integer Param)  {
             final String url = configReader.getApplicationUrl() + EndPoint.BOOKING_DETAILS.UPDATE_BOOKING;
             return baseSetUp.patchApiWithPathParam(url, createBookingRequest, "application/json",headerParam,Param);
+    }
+
+    public Response putBooking(CreateBookingRequest createBookingRequest, HashMap<String, String> headerParam, Integer Param)  {
+        final String url = configReader.getApplicationUrl() + EndPoint.BOOKING_DETAILS.UPDATE_BOOKING;
+        return baseSetUp.putApiWithPathParam(url, createBookingRequest, "application/json",headerParam,Param);
     }
         public Response getBookingWithQueryParam( HashMap<String, String> headerParam,HashMap<String,String> queryParam) {
             final String url = configReader.getApplicationUrl() + EndPoint.BOOKING_DETAILS.GET_BOOKING;
