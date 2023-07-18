@@ -53,7 +53,9 @@ public class GetBookingTests {
         assertEquals(createBookingRequest.getLastname(),getresponse.path("lastname"));
         assertEquals(createBookingRequest.getTotalprice(),getresponse.path("totalprice"));
         assertEquals(createBookingRequest.getDepositpaid(),getresponse.path("depositpaid"));
-        assertEquals(createBookingRequest.getBookingdates(),getresponse.path("bookingdates"));
+        assertEquals(createBookingRequest.getBookingdates().getCheckin(),getresponse.path("bookingdates.checkin"));
+        assertEquals(createBookingRequest.getBookingdates().getCheckout(),getresponse.path("bookingdates.checkout"));
+
     }
     @Test
     @DisplayName("validating the Get Booking with two parameters")
