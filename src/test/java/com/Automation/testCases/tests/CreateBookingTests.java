@@ -3,6 +3,8 @@ package com.Automation.testCases.tests;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.HashMap;
+
+import com.Automation.util.Header;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
@@ -27,7 +29,7 @@ public class CreateBookingTests {
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue= new HashMap<>();
-        headerValue.put("accept","application/json");
+        headerValue.put("accept", Header.JSON.getValue());
         Response response = bookingController.postBooking(createBookingRequest,headerValue);
 
         LOG.info("ASSERTING THE API RESPONSE");
@@ -50,7 +52,7 @@ public class CreateBookingTests {
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue= new HashMap<>();
-        headerValue.put("accept","application/javascript");
+        headerValue.put("accept",Header.JAVASCRIPT.getValue());
         Response response = bookingController.postBooking(createBookingRequest,headerValue);
 
         LOG.info("ASSERTING THE API RESPONSE");
@@ -63,7 +65,7 @@ public class CreateBookingTests {
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue= new HashMap<>();
-        headerValue.put("accept","application/json");
+        headerValue.put("accept",Header.JSON.getValue());
         Response response = bookingController.postBooking(createBookingRequest,headerValue);
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(500, response.getStatusCode());

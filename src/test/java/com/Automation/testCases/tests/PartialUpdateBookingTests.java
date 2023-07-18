@@ -5,6 +5,7 @@ import com.Automation.model.CreateBookingRequest;
 import com.Automation.testCases.dataProvider.BookingDataProvider;
 import com.Automation.util.CreateBooking;
 import com.Automation.util.GetAuth;
+import com.Automation.util.Header;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
 import io.restassured.response.Response;
 import org.junit.Test;
@@ -30,7 +31,7 @@ public class PartialUpdateBookingTests {
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(UpdateRequest);
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", "application/json");
+        headerValue.put("accept", Header.JSON.getValue());
         headerValue.put("cookie", "token="+getAuth.getAuth());
         Response response = bookingController.patchBooking(createBookingRequest,headerValue,createBooking.getBookingId());
 
@@ -64,7 +65,7 @@ public class PartialUpdateBookingTests {
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(UpdateRequest);
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", "application/json");
+        headerValue.put("accept", Header.JSON.getValue());
         Response response = bookingController.patchBooking(createBookingRequest,headerValue,createBooking.getBookingId());
 
         LOG.info("ASSERTING THE API RESPONSE");

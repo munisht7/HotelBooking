@@ -4,8 +4,7 @@ public enum Header {
         TEXT("text/plain"),
         HTML("text/html"),
         JSON("application/json"),
-        XML("application/xml");
-
+        JAVASCRIPT("application/javascript");
         private final String value;
 
         Header(String value) {

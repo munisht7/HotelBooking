@@ -5,6 +5,7 @@ import com.Automation.model.CreateBookingRequest;
 import com.Automation.testCases.dataProvider.BookingDataProvider;
 import com.Automation.util.CreateBooking;
 import com.Automation.util.GetAuth;
+import com.Automation.util.Header;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
 import io.restassured.response.Response;
@@ -32,8 +33,8 @@ public class UpdateBookingTests {
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue= new HashMap<>();
-        headerValue.put("accept","application/json");
-        headerValue.put("content-type","application/json");
+        headerValue.put("accept", Header.JSON.getValue());
+        headerValue.put("content-type",Header.JSON.getValue());
         headerValue.put("cookie", "token="+getAuth.getAuth());
 
         Response response = bookingController.putBooking(createBookingRequest,headerValue,createBooking.getBookingId());
@@ -58,7 +59,7 @@ public class UpdateBookingTests {
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue= new HashMap<>();
-        headerValue.put("accept","application/javascript");
+        headerValue.put("accept",Header.JAVASCRIPT.getValue());
         headerValue.put("cookie", "token="+getAuth.getAuth());
 
         Response response = bookingController.putBooking(createBookingRequest,headerValue,createBooking.getBookingId());
@@ -77,8 +78,8 @@ public class UpdateBookingTests {
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue= new HashMap<>();
-        headerValue.put("accept","application/json");
-        headerValue.put("content-type","application/json");
+        headerValue.put("accept",Header.JSON.getValue());
+        headerValue.put("content-type",Header.JSON.getValue());
         headerValue.put("cookie", "token="+getAuth.getAuth());
 
         Response response = bookingController.putBooking(createBookingRequest,headerValue,createBooking.getBookingId());

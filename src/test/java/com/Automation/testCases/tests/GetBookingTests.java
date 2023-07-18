@@ -3,6 +3,7 @@ package com.Automation.testCases.tests;
 import com.Automation.controllers.BookingController;
 import com.Automation.model.CreateBookingRequest;
 import com.Automation.testCases.dataProvider.BookingDataProvider;
+import com.Automation.util.Header;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
 import io.restassured.response.Response;
@@ -59,7 +60,7 @@ public class GetBookingTests {
     public void getBookingDetailsWithFirstNameAndLastName(){
 
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", "application/json");
+        headerValue.put("accept", Header.JSON.getValue());
         // Adding the Query Parameters in the request
         HashMap<String, String> queryParam = new HashMap<>();
         queryParam.put("firstname", "Josh");
@@ -78,11 +79,11 @@ public class GetBookingTests {
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", "application/json");
+        headerValue.put("accept",Header.JSON.getValue());
         // Create a bookingId and get the bookingId from the response and pass it in the get Api request
         Response response = bookingController.postBooking(createBookingRequest,headerValue);
         // Make a get request with the bookingid obtained from the post request
-        headerValue.put("accept", "application/javascript");
+        headerValue.put("accept", Header.JAVASCRIPT.getValue());
         Response getresponse = bookingController.getBookingWithPathParam(headerValue,response.path("bookingid"));
 
         LOG.info("ASSERTING THE API RESPONSE");

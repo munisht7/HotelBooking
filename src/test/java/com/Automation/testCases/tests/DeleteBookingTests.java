@@ -4,6 +4,7 @@ import com.Automation.controllers.BookingController;
 import com.Automation.model.CreateBookingRequest;
 import com.Automation.testCases.dataProvider.BookingDataProvider;
 import com.Automation.util.GetAuth;
+import com.Automation.util.Header;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
 import io.restassured.response.Response;
@@ -27,7 +28,7 @@ public class DeleteBookingTests {
     public void deleteBookingTest(Object CreateRequest) throws Exception {
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue= new HashMap<>();
-        headerValue.put("accept","application/json");
+        headerValue.put("accept",Header.JSON.getValue());
         // Create a bookingId and get the bookingId from the response and pass it in the delete Api request
         Response response = bookingController.postBooking(createBookingRequest,headerValue);
         // Adding a cookie header for the auth
@@ -49,7 +50,7 @@ public class DeleteBookingTests {
     public void deleteBookingWIthoutAuthToken(Object CreateRequest) throws Exception {
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue= new HashMap<>();
-        headerValue.put("accept","application/json");
+        headerValue.put("accept", Header.JSON.getValue());
         // Create a bookingId and get the bookingId from the response and pass it in the delete Api request
         Response response = bookingController.postBooking(createBookingRequest,headerValue);
         //Make a request for Delete API
