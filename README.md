@@ -76,6 +76,7 @@ The following components are required to get started with automation:
 ## Run tests using terminal
 * Execute the test cases through terminal using maven by using the following command : **mvn test**
 * Test cases : 70 (Passed)
+![](BuildSuccess.png)
 
 ## Run the JUnit Test Cases
 * Select **"Run"** or **"Debug"** to start the test
