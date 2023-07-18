@@ -44,13 +44,13 @@ The following components are required to get started with automation:
            - controllers
              - BookingController (handles the logic and operations related to booking functionality)
            - model
-             - BaseModel (serves as a common base)
+             - BookingDates (Getters and setters for checkin and checkout dates for bookingdates)
              - CreateBookingRequest (Getters and setters for creating booking request)
-             - PartialUpdateBookingRequest (Getters and setters for Partial Update Booking Request )
            - util
              - ConfigReader (this file is for reading the configurations from config.properties)
              - CreateBooking (contains a method to return the bookingId after calling the create booking API)
              - GetAuth (contains a method to return the token to used for delete and partial update booking)
+             - Header (adding the class as enum for Headers)
    - test
      - java
        - com
@@ -66,6 +66,7 @@ The following components are required to get started with automation:
      - resources
        - tests_data
          - CreateBookingCreationData.yaml (contains the data for creating the booking)
+         - CreateBookingCreationDataForInternalServerErrors.yaml (contains the data for creating the booking for 5XX series)
          - PartialUpdateBookingCreationData.yaml (contains the data for updating the booking)
 
 ## Run tests locally
@@ -74,16 +75,14 @@ The following components are required to get started with automation:
 
 ## Run tests using terminal
 * Execute the test cases through terminal using maven by using the following command : **mvn test**
-* Test cases : 25 (Passed)
-![](BuildSuccess.png)
+* Test cases : 70 (Passed)
 
 ## Run the JUnit Test Cases
 * Select **"Run"** or **"Debug"** to start the test
 
 ## Reporting
 * Run **mvn site** command from the terminal. It will generate HTML reports in **target/site** directory
-* Open the **surefire-report.html** file in the browser like shown below :
-![](report.png)
+* Open the **surefire-report.html** file in the browser
 
 ## Referred to the following links for the project
 
