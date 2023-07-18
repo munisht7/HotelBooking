@@ -14,7 +14,7 @@ public class CreateBookingRequest {
     private String firstname;
 
     @JsonProperty("bookingdates")
-    private Object bookingdates;
+    private BookingDates bookingdates;
 
     @JsonProperty("lastname")
     private String lastname;
