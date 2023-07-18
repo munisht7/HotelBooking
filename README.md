@@ -92,3 +92,4 @@ The following components are required to get started with automation:
 * Maven Download : https://maven.apache.org/download.cgi
 * Maven Documentation : https://maven.apache.org/guides/
 * API Documentation: http://restful-booker.herokuapp.com/apidoc/index.html#api-Booking-GetBookings
+* Lombok Documentation: https://projectlombok.org/
