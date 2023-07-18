@@ -53,8 +53,8 @@ public class PartialUpdateBookingTests {
             assertEquals(createBookingRequest.getDepositpaid(), response.path("depositpaid"));
         }
         if(createBookingRequest.getBookingdates() != null){
-            assertNotNull(response.path("bookingdates.checkin"));
-            assertNotNull(response.path("bookingdates.checkout"));
+            assertEquals(createBookingRequest.getBookingdates().getCheckin(), response.path("bookingdates.checkin"));
+            assertEquals(createBookingRequest.getBookingdates().getCheckout(), response.path("bookingdates.checkout"));
         }
     }
 

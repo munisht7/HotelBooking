@@ -39,8 +39,8 @@ public class CreateBookingTests {
         assertEquals(createBookingRequest.getLastname(),response.path("booking.lastname"));
         assertEquals(createBookingRequest.getTotalprice(), response.path("booking.totalprice"));
         assertEquals(createBookingRequest.getDepositpaid(), response.path("booking.depositpaid"));
-        assertNotNull( response.path("booking.bookingdates.checkin"));
-        assertNotNull( response.path("booking.bookingdates.checkout"));
+        assertEquals(createBookingRequest.getBookingdates().getCheckin(),response.path("booking.bookingdates.checkin"));
+        assertEquals(createBookingRequest.getBookingdates().getCheckout(), response.path("booking.bookingdates.checkout"));
         if(createBookingRequest.getAdditionalneeds() != null) {
             assertEquals(createBookingRequest.getAdditionalneeds(), response.path("booking.additionalneeds"));
         }
