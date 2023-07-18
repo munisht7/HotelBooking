@@ -2,58 +2,39 @@ package com.Automation.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CreateBookingRequest {
+
+    @Getter
+    @Setter
     @JsonProperty("firstname")
     private String firstname;
 
-    public Object getBookingdates() {
-        return bookingdates;
-    }
-
-    public void setBookingdates(Object bookingdates) {
-        this.bookingdates = bookingdates;
-    }
-
+    @Getter
+    @Setter
     @JsonProperty("bookingdates")
     private Object bookingdates;
+
+    @Getter
+    @Setter
     @JsonProperty("lastname")
     private String lastname;
+
+    @Getter
+    @Setter
     @JsonProperty("totalprice")
     private Integer totalprice;
-    public Integer getTotalprice() {
-        return totalprice;
-    }
-    public void setTotalprice(Integer totalprice) {
-        this.totalprice = totalprice;
-    }
-    public Boolean getDepositpaid() {
-        return depositpaid;
-    }
-    public void setDepositpaid(Boolean depositpaid) {
-        this.depositpaid = depositpaid;
-    }
-    public String getFirstname() {
-        return firstname;
-    }
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-    public String getLastname() {
-        return lastname;
-    }
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-    public String getAdditionalneeds() {
-        return additionalneeds;
-    }
-    public void setAdditionalneeds(String additionalneeds) {
-        this.additionalneeds = additionalneeds;
-    }
+
+    @Getter
+    @Setter
     @JsonProperty("depositpaid")
     private Boolean depositpaid;
+
+    @Getter
+    @Setter
     @JsonProperty("additionalneeds")
     private String additionalneeds;
 }
