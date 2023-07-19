@@ -35,10 +35,13 @@ public class DeleteBookingTests {
         headerValue.put("cookie", "token=" + getAuth.getAuth());
         // Make a request for Delete API
         Response deleteResponse = bookingController.deleteBooking(headerValue, response.path("bookingid"));
+
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(201, deleteResponse.getStatusCode());
+
         // checking the get response to validate that the deleted booking is not fetched
         Response getresponse = bookingController.getBookingWithPathParam(headerValue, response.path("bookingid"));
+
         LOG.info("ASSERTING 404 TO CHECK THAT DELETED BOOKING IS NOT BEING FETCHED");
         assertEquals(404, getresponse.getStatusCode());
         assertEquals("Not Found", getresponse.body().print());

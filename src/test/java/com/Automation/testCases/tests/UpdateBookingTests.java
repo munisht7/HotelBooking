@@ -34,7 +34,6 @@ public class UpdateBookingTests {
         headerValue.put("accept", Header.JSON.getValue());
         headerValue.put("content-type", Header.JSON.getValue());
         headerValue.put("cookie", "token=" + getAuth.getAuth());
-
         Response response = bookingController.putBooking(createBookingRequest, headerValue, createBooking.getBookingId());
 
         LOG.info("ASSERTING THE API RESPONSE");
@@ -59,7 +58,6 @@ public class UpdateBookingTests {
         HashMap<String, String> headerValue = new HashMap<>();
         headerValue.put("accept", Header.JAVASCRIPT.getValue());
         headerValue.put("cookie", "token=" + getAuth.getAuth());
-
         Response response = bookingController.putBooking(createBookingRequest, headerValue, createBooking.getBookingId());
 
         LOG.info("ASSERTING THE API RESPONSE");
@@ -78,8 +76,8 @@ public class UpdateBookingTests {
         headerValue.put("accept", Header.JSON.getValue());
         headerValue.put("content-type", Header.JSON.getValue());
         headerValue.put("cookie", "token=" + getAuth.getAuth());
-
         Response response = bookingController.putBooking(createBookingRequest, headerValue, createBooking.getBookingId());
+
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(400, response.getStatusCode());
         assertEquals("Bad Request", response.body().print());
