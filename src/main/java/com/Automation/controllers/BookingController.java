@@ -6,7 +6,6 @@ import com.Automation.model.CreateBookingRequest;
 import com.Automation.util.ConfigReader;
 import com.Automation.util.Header;
 import io.restassured.response.Response;
-
 import java.util.HashMap;
 
 public class BookingController {
