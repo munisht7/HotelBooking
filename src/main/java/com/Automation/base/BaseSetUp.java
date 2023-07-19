@@ -3,35 +3,40 @@ package com.Automation.base;
 import com.Automation.model.CreateBookingRequest;
 import com.Automation.util.Header;
 import io.restassured.response.Response;
+
 import java.util.HashMap;
 import java.util.Map;
+
 import static io.restassured.RestAssured.given;
+
 public class BaseSetUp {
     public Response response = null;
+
     public Response postApi(String url, CreateBookingRequest requestbody, String contentType, HashMap<String, ? extends Object> headerParameters) {
-        response= given().contentType(contentType).
+        response = given().contentType(contentType).
                 body(requestbody).
                 headers(headerParameters).
-                        when().
-                        log().all().
-                        post(url).
-                        then().
-                        extract().response();
+                when().
+                log().all().
+                post(url).
+                then().
+                extract().response();
         return response;
     }
 
     public Response postApiForAuth(String url, String requestbody, String contentType) {
-        response= given().contentType(contentType).
+        response = given().contentType(contentType).
                 body(requestbody).
-                        when().
-                        log().all().
-                        post(url).
-                        then().
-                        extract().response();
+                when().
+                log().all().
+                post(url).
+                then().
+                extract().response();
         return response;
     }
+
     public Response postApiForBookingId(String url, String requestbody, String contentType) {
-        response= given().contentType(contentType).
+        response = given().contentType(contentType).
                 body(requestbody).
                 when().
                 log().all().
@@ -42,7 +47,7 @@ public class BaseSetUp {
     }
 
     public Response getApi(String url, String contentType, HashMap<String, ? extends Object> headerParameters) {
-        response= given().contentType(contentType).
+        response = given().contentType(contentType).
                 headers(headerParameters).
                 when().
                 log().all().
@@ -51,51 +56,54 @@ public class BaseSetUp {
                 extract().response();
         return response;
     }
-    public Response getApiWithPathParam(String url, String contentType, HashMap<String, ? extends Object> headerParameters,Integer pathParam) {
-        response= given().contentType(contentType).
+
+    public Response getApiWithPathParam(String url, String contentType, HashMap<String, ? extends Object> headerParameters, Integer pathParam) {
+        response = given().contentType(contentType).
                 headers(headerParameters).
                 when().
                 log().all().
-                get(url,pathParam).
+                get(url, pathParam).
                 then().
                 extract().response();
         return response;
     }
+
     public Response patchApiWithPathParam(String url, CreateBookingRequest requestbody, String contentType, HashMap<String, ? extends Object> headerParameters, Integer pathParam) {
-        response= given().contentType(contentType).
+        response = given().contentType(contentType).
                 body(requestbody).
                 headers(headerParameters).
                 when().
                 log().all().
-                patch(url,pathParam).
+                patch(url, pathParam).
                 then().
                 extract().response();
         return response;
     }
 
     public Response putApiWithPathParam(String url, CreateBookingRequest requestbody, String contentType, HashMap<String, ? extends Object> headerParameters, Integer pathParam) {
-        response= given().contentType(contentType).
+        response = given().contentType(contentType).
                 body(requestbody).
                 headers(headerParameters).
                 when().
                 log().all().
-                put(url,pathParam).
+                put(url, pathParam).
                 then().
                 extract().response();
         return response;
     }
 
-    public Response deleteApi(String url, String contentType, HashMap<String, ? extends Object> headerParameters,Integer pathParam) {
-        response= given().contentType(contentType).
+    public Response deleteApi(String url, String contentType, HashMap<String, ? extends Object> headerParameters, Integer pathParam) {
+        response = given().contentType(contentType).
                 headers(headerParameters).
                 when().
                 log().all().
-                delete(url,pathParam).
+                delete(url, pathParam).
                 then().
                 extract().response();
         return response;
     }
-    public Response getApiwithQueryParam(String url, String contentType, Map<String,? extends Object> headerParameters, Map<String,? extends Object> queryParam){
+
+    public Response getApiwithQueryParam(String url, String contentType, Map<String, ? extends Object> headerParameters, Map<String, ? extends Object> queryParam) {
         response = given().contentType(contentType).
                 headers(headerParameters).
                 queryParams(queryParam).when().log().all()

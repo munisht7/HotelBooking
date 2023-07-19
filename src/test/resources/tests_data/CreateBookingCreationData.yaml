@@ -4,8 +4,8 @@
   totalprice: 150
   depositpaid: true
   bookingdates:
-    checkin : 2015-01-01
-    checkout : 2019-01-01
+    checkin: 2015-01-01
+    checkout: 2019-01-01
   additionalneeds: Dinner
 
 # depostId as true and total price as 1000 and additional needs as Lunch
@@ -14,8 +14,8 @@
   totalprice: 10
   depositpaid: true
   bookingdates:
-    checkin : 2018-01-01
-    checkout : 2021-01-01
+    checkin: 2018-01-01
+    checkout: 2021-01-01
   additionalneeds: Lunch
 
 # depostId as false and total price as 1
@@ -24,8 +24,8 @@
   totalprice: 1
   depositpaid: false
   bookingdates:
-    checkin : 2018-01-01
-    checkout : 2023-01-01
+    checkin: 2018-01-01
+    checkout: 2023-01-01
   additionalneeds: Breakfast
 
 # check in and check out dates as future
@@ -34,8 +34,8 @@
   totalprice: 100
   depositpaid: true
   bookingdates:
-    checkin : 2024-01-01
-    checkout : 2024-01-01
+    checkin: 2024-01-01
+    checkout: 2024-01-01
   additionalneeds: Breakfast
 
 # without additional needs
@@ -44,5 +44,5 @@
   totalprice: 100
   depositpaid: true
   bookingdates:
-    checkin : 2024-01-01
-    checkout : 2024-01-01
+    checkin: 2024-01-01
+    checkout: 2024-01-01

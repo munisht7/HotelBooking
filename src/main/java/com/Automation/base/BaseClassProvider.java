@@ -4,10 +4,12 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.io.File;
 
 public class BaseClassProvider {
     private static final Logger LOG = LoggerFactory.getLogger(BaseClassProvider.class);
+
     public static <T> Object[][] testDataGenerator(final String inputDataFile, Class<T[]> classz) {
         T[] dateSet = loadDataFromYamlFile(inputDataFile, classz);
         Object[][] obj = new Object[dateSet.length][1];
@@ -16,6 +18,7 @@ public class BaseClassProvider {
         }
         return obj;
     }
+
     public static <T> T[] loadDataFromYamlFile(final String inputDataFile, Class<T[]> classz) {
         LOG.info("LOADING DATA FROM YAML FILE");
         LOG.info(inputDataFile);

@@ -3,8 +3,8 @@
   totalprice: 150
   depositpaid: true
   bookingdates:
-    checkin : 2015-01-01
-    checkout : 2019-01-01
+    checkin: 2015-01-01
+    checkout: 2019-01-01
   additionalneeds: Dinner
 
 # Without last Name
@@ -12,16 +12,16 @@
   totalprice: 10
   depositpaid: true
   bookingdates:
-    checkin : 2018-01-01
-    checkout : 2021-01-01
+    checkin: 2018-01-01
+    checkout: 2021-01-01
   additionalneeds: Lunch
 
 # Without total Price
 - firstname: Peter
   depositpaid: true
   bookingdates:
-    checkin : 2018-01-01
-    checkout : 2021-01-01
+    checkin: 2018-01-01
+    checkout: 2021-01-01
   additionalneeds: Lunch
 
 # without depostPaid
@@ -29,8 +29,8 @@
   lastname: Jenson
   totalprice: 1
   bookingdates:
-    checkin : 2018-01-01
-    checkout : 2023-01-01
+    checkin: 2018-01-01
+    checkout: 2023-01-01
   additionalneeds: Breakfast
 
 # without booking dates
@@ -45,7 +45,7 @@
   lastname: Jenson
   totalprice: 1
   bookingdates:
-    checkout : 2023-01-01
+    checkout: 2023-01-01
   additionalneeds: Breakfast
 
 # without checkout date
@@ -53,5 +53,5 @@
   lastname: Jenson
   totalprice: 1
   bookingdates:
-    checkin : 2023-01-01
+    checkin: 2023-01-01
   additionalneeds: Breakfast
