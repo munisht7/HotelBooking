@@ -27,7 +27,7 @@ public class GetBookingTests {
     public void getBookingDetailsWithoutFilter() {
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", Header.JSON.getValue());
+        headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
         Response response = bookingController.getBookingWithoutQueryParam(headerValue);
 
         LOG.info("ASSERTING THE API RESPONSE");
@@ -43,7 +43,7 @@ public class GetBookingTests {
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", Header.JSON.getValue());
+        headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
         // Create a bookingId and get the bookingId from the response and pass it in the get Api request
         Response response = bookingController.postBooking(createBookingRequest, headerValue);
         // Make a get request with the bookingid obtained from the post request
@@ -65,7 +65,7 @@ public class GetBookingTests {
     public void getBookingDetailsWithFirstNameAndLastName() {
 
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", Header.JSON.getValue());
+        headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
         // Adding the Query Parameters in the request
         HashMap<String, String> queryParam = new HashMap<>();
         queryParam.put("firstname", "Josh");
@@ -85,7 +85,7 @@ public class GetBookingTests {
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", Header.JSON.getValue());
+        headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
         // Create a bookingId and get the bookingId from the response and pass it in the get Api request
         Response response = bookingController.postBooking(createBookingRequest, headerValue);
         // Make a get request with the bookingid obtained from the post request

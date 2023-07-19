@@ -28,7 +28,7 @@ public class CreateBookingTests {
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", Header.JSON.getValue());
+        headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
         Response response = bookingController.postBooking(createBookingRequest, headerValue);
 
         LOG.info("ASSERTING THE API RESPONSE");
@@ -52,7 +52,7 @@ public class CreateBookingTests {
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", Header.JAVASCRIPT.getValue());
+        headerValue.put(Header.ACCEPT.getValue(), Header.JAVASCRIPT.getValue());
         Response response = bookingController.postBooking(createBookingRequest, headerValue);
 
         LOG.info("ASSERTING THE API RESPONSE");
@@ -66,7 +66,7 @@ public class CreateBookingTests {
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", Header.JSON.getValue());
+        headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
         Response response = bookingController.postBooking(createBookingRequest, headerValue);
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(500, response.getStatusCode());

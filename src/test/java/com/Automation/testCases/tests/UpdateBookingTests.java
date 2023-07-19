@@ -32,8 +32,8 @@ public class UpdateBookingTests {
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue = new HashMap<>();
         headerValue.put("accept", Header.JSON.getValue());
-        headerValue.put("content-type", Header.JSON.getValue());
-        headerValue.put("cookie", "token=" + getAuth.getAuth());
+        headerValue.put(Header.CONTENT.getValue(), Header.JSON.getValue());
+        headerValue.put(Header.COOKIE.getValue(), "token=" + getAuth.getAuth());
         Response response = bookingController.putBooking(createBookingRequest, headerValue, createBooking.getBookingId());
 
         LOG.info("ASSERTING THE API RESPONSE");
@@ -56,8 +56,8 @@ public class UpdateBookingTests {
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", Header.JAVASCRIPT.getValue());
-        headerValue.put("cookie", "token=" + getAuth.getAuth());
+        headerValue.put(Header.ACCEPT.getValue(), Header.JAVASCRIPT.getValue());
+        headerValue.put(Header.COOKIE.getValue(), "token=" + getAuth.getAuth());
         Response response = bookingController.putBooking(createBookingRequest, headerValue, createBooking.getBookingId());
 
         LOG.info("ASSERTING THE API RESPONSE");
@@ -73,9 +73,9 @@ public class UpdateBookingTests {
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", Header.JSON.getValue());
-        headerValue.put("content-type", Header.JSON.getValue());
-        headerValue.put("cookie", "token=" + getAuth.getAuth());
+        headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
+        headerValue.put(Header.CONTENT.getValue(), Header.JSON.getValue());
+        headerValue.put(Header.COOKIE.getValue(), "token=" + getAuth.getAuth());
         Response response = bookingController.putBooking(createBookingRequest, headerValue, createBooking.getBookingId());
 
         LOG.info("ASSERTING THE API RESPONSE");

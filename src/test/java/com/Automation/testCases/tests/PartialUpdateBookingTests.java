@@ -31,8 +31,8 @@ public class PartialUpdateBookingTests {
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(UpdateRequest);
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", Header.JSON.getValue());
-        headerValue.put("cookie", "token=" + getAuth.getAuth());
+        headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
+        headerValue.put(Header.COOKIE.getValue(), "token=" + getAuth.getAuth());
         Response response = bookingController.patchBooking(createBookingRequest, headerValue, createBooking.getBookingId());
 
         LOG.info("ASSERTING THE API RESPONSE");
@@ -65,7 +65,7 @@ public class PartialUpdateBookingTests {
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(UpdateRequest);
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", Header.JSON.getValue());
+        headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
         Response response = bookingController.patchBooking(createBookingRequest, headerValue, createBooking.getBookingId());
 
         LOG.info("ASSERTING THE API RESPONSE");

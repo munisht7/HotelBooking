@@ -28,11 +28,11 @@ public class DeleteBookingTests {
     public void deleteBookingTest(Object CreateRequest) throws Exception {
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", Header.JSON.getValue());
+        headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
         // Create a bookingId and get the bookingId from the response and pass it in the delete Api request
         Response response = bookingController.postBooking(createBookingRequest, headerValue);
         // Adding a cookie header for the auth
-        headerValue.put("cookie", "token=" + getAuth.getAuth());
+        headerValue.put(Header.COOKIE.getValue(), "token=" + getAuth.getAuth());
         // Make a request for Delete API
         Response deleteResponse = bookingController.deleteBooking(headerValue, response.path("bookingid"));
 
@@ -53,7 +53,7 @@ public class DeleteBookingTests {
     public void deleteBookingWIthoutAuthToken(Object CreateRequest) throws Exception {
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
         HashMap<String, String> headerValue = new HashMap<>();
-        headerValue.put("accept", Header.JSON.getValue());
+        headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
         // Create a bookingId and get the bookingId from the response and pass it in the delete Api request
         Response response = bookingController.postBooking(createBookingRequest, headerValue);
         //Make a request for Delete API
