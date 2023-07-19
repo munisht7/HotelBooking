@@ -30,6 +30,15 @@ jobs:
       - name: Build
         run: mvn --batch-mode -DskipTests package
 
+  tests:
+    needs: [ build ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+
       - name: Test
         run: mvn --batch-mode test
 
