@@ -29,5 +29,4 @@ public class BookingDataProvider extends BaseClassProvider {
         return testDataGenerator("src/test/resources/tests_data/PartialUpdateBookingCreationData.yaml",
                 CreateBookingRequest[].class);
     }
-
 }

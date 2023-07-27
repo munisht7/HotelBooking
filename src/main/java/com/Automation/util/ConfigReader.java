@@ -2,7 +2,6 @@ package com.Automation.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.FileInputStream;
@@ -18,7 +17,7 @@ public class ConfigReader {
             fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/com/Automation/config/config.properties");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            LOGGER.info("Cant't read config.properties file!");
+            LOGGER.info("Can't read config.properties file!");
             return;
         }
         Properties properties = new Properties();
@@ -26,7 +25,7 @@ public class ConfigReader {
             properties.load(fis);
         } catch (IOException e) {
             e.printStackTrace();
-            LOGGER.info("Cant't read config.properties file!");
+            LOGGER.info("Can't read config.properties file!");
             return;
         }
         applicationUrl = properties.getProperty("applicationUrl");
