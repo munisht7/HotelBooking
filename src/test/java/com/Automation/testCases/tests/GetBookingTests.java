@@ -90,7 +90,7 @@ public class GetBookingTests {
         headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
         // Make a get request with the bookingid obtained from the post request
         headerValue.put("accept", Header.JAVASCRIPT.getValue());
-        Response getresponse = bookingController.getBookingWithPathParam(headerValue, createBooking.getBookingId());
+        Response getresponse = bookingController.getBookingWithPathParam(headerValue, createBooking.bookingResponse().path("bookingid"));
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(418, getresponse.getStatusCode());

@@ -59,7 +59,7 @@ public class DeleteBookingTests {
         HashMap<String, String> headerValue = new HashMap<>();
         headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
         //Make a request for Delete API
-        Response deleteResponse = bookingController.deleteBooking(headerValue, createBooking.getBookingId());
+        Response deleteResponse = bookingController.deleteBooking(headerValue, createBooking.bookingResponse().path("bookingid"));
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(403, deleteResponse.getStatusCode());
