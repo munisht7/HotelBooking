@@ -18,7 +18,6 @@ public class CreateBooking {
                 "    \"depositpaid\": true,\n" +
                 "    \"additionalneeds\": \"Breakfast\"\n" +
                 "}";
-        Response response = bookingController.postBooking(requestBody);
-        return response;
+        return bookingController.postBooking(requestBody);
     }
 }
