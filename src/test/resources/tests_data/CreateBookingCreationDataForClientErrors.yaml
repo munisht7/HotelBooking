@@ -1,0 +1,57 @@
+# Without first Name
+- lastname: Jenson
+  totalprice: 150
+  depositpaid: true
+  bookingdates:
+    checkin: 2015-01-01
+    checkout: 2019-01-01
+  additionalneeds: Dinner
+
+# Without last Name
+- firstname: Peter
+  totalprice: 10
+  depositpaid: true
+  bookingdates:
+    checkin: 2018-01-01
+    checkout: 2021-01-01
+  additionalneeds: Lunch
+
+# Without total Price
+- firstname: Peter
+  depositpaid: true
+  bookingdates:
+    checkin: 2018-01-01
+    checkout: 2021-01-01
+  additionalneeds: Lunch
+
+# without depostPaid
+- firstname: Peter
+  lastname: Jenson
+  totalprice: 1
+  bookingdates:
+    checkin: 2018-01-01
+    checkout: 2023-01-01
+  additionalneeds: Breakfast
+
+# without booking dates
+- firstname: Peter
+  lastname: Jenson
+  totalprice: 100
+  depositpaid: true
+  additionalneeds: Breakfast
+
+# without checkin date
+- firstname: Peter
+  lastname: Jenson
+  totalprice: 1
+  bookingdates:
+    checkout: 2023-01-01
+  additionalneeds: Breakfast
+
+# without checkout date
+- firstname: Peter
+  lastname: Jenson
+  totalprice: 1
+  bookingdates:
+    checkin: 2023-01-01
+  additionalneeds: Breakfast

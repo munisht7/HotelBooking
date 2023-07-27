@@ -69,8 +69,8 @@ public class UpdateBookingTests {
 
 
     @Test
-    @UseDataProvider(value = "createBookingDetailsForInternalServerErrors", location = BookingDataProvider.class)
-    @DisplayName("Checking the response for 500")
+    @UseDataProvider(value = "createBookingDetailsForClientErrors", location = BookingDataProvider.class)
+    @DisplayName("Checking the response for 400")
     public void updateBookingTestWithoutMandatoryFields(Object CreateRequest) {
 
         CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);

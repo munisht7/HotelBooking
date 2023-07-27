@@ -3,6 +3,7 @@ package com.Automation.testCases.tests;
 import com.Automation.controllers.BookingController;
 import com.Automation.model.CreateBookingRequest;
 import com.Automation.testCases.dataProvider.BookingDataProvider;
+import com.Automation.util.CreateBooking;
 import com.Automation.util.Header;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
@@ -23,6 +24,7 @@ import java.util.HashMap;
 public class GetBookingTests {
     private static final Logger LOG = LoggerFactory.getLogger(GetBookingTests.class);
     BookingController bookingController = new BookingController();
+    CreateBooking createBooking = new CreateBooking();
 
     @Test
     @DisplayName("validating the Get Booking without Filter")
@@ -81,18 +83,14 @@ public class GetBookingTests {
     }
 
     @Test
-    @UseDataProvider(value = "createBookingDetails", location = BookingDataProvider.class)
     @DisplayName("Checking the response wih application/javascript as header")
-    public void checkingOtherHeaderTypes(Object CreateRequest) {
-        CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
+    public void checkingOtherHeaderTypes() {
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
         headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
-        // Create a bookingId and get the bookingId from the response and pass it in the get Api request
-        Response response = bookingController.postBooking(createBookingRequest, headerValue);
         // Make a get request with the bookingid obtained from the post request
         headerValue.put("accept", Header.JAVASCRIPT.getValue());
-        Response getresponse = bookingController.getBookingWithPathParam(headerValue, response.path("bookingid"));
+        Response getresponse = bookingController.getBookingWithPathParam(headerValue, createBooking.getBookingId());
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(418, getresponse.getStatusCode());

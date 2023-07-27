@@ -19,6 +19,12 @@ public class BookingDataProvider extends BaseClassProvider {
     }
 
     @DataProvider
+    public static Object[][] createBookingDetailsForClientErrors() {
+        return testDataGenerator("src/test/resources/tests_data/CreateBookingCreationDataForClientErrors.yaml",
+                CreateBookingRequest[].class);
+    }
+
+    @DataProvider
     public static Object[][] updateBookingDetails() {
         return testDataGenerator("src/test/resources/tests_data/PartialUpdateBookingCreationData.yaml",
                 CreateBookingRequest[].class);

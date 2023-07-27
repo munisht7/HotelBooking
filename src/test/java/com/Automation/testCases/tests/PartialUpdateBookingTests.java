@@ -62,14 +62,12 @@ public class PartialUpdateBookingTests {
     }
 
     @Test
-    @UseDataProvider(value = "updateBookingDetails", location = BookingDataProvider.class)
     @DisplayName("Update Fail without Auth Token")
-    public void updateFailWithoutAuthToken(Object UpdateRequest) {
-        CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(UpdateRequest);
+    public void updateFailWithoutAuthToken() {
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
         headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
-        Response response = bookingController.patchBooking(createBookingRequest, headerValue, createBooking.getBookingId());
+        Response response = bookingController.patchBookingWithoutBody(headerValue, createBooking.getBookingId());
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(403, response.getStatusCode());

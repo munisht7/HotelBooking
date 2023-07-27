@@ -79,6 +79,18 @@ public class BaseSetUp {
         return response;
     }
 
+    public Response patchApiWithPathParamAndWithoutBody(String url, String contentType, HashMap<String, ? extends Object> headerParameters, Integer pathParam) {
+        response = given().contentType(contentType).
+                headers(headerParameters).
+                when().
+                log().all().
+                patch(url, pathParam).
+                then().
+                extract().response();
+        return response;
+    }
+
+
     public Response putApiWithPathParam(String url, CreateBookingRequest requestbody, String contentType, HashMap<String, ? extends Object> headerParameters, Integer pathParam) {
         response = given().contentType(contentType).
                 body(requestbody).

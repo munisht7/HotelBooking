@@ -3,6 +3,7 @@ package com.Automation.testCases.tests;
 import com.Automation.controllers.BookingController;
 import com.Automation.model.CreateBookingRequest;
 import com.Automation.testCases.dataProvider.BookingDataProvider;
+import com.Automation.util.CreateBooking;
 import com.Automation.util.GetAuth;
 import com.Automation.util.Header;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
@@ -23,6 +24,8 @@ public class DeleteBookingTests {
     private static final Logger LOG = LoggerFactory.getLogger(DeleteBookingTests.class);
     BookingController bookingController = new BookingController();
     GetAuth getAuth = new GetAuth();
+
+    CreateBooking createBooking = new CreateBooking();
 
     @Test
     @UseDataProvider(value = "createBookingDetails", location = BookingDataProvider.class)
@@ -50,16 +53,13 @@ public class DeleteBookingTests {
     }
 
     @Test
-    @UseDataProvider(value = "createBookingDetails", location = BookingDataProvider.class)
     @DisplayName("Validating the delete booking without Auth Token ")
-    public void deleteBookingWIthoutAuthToken(Object CreateRequest) throws Exception {
-        CreateBookingRequest createBookingRequest = CreateBookingRequest.class.cast(CreateRequest);
+    public void deleteBookingWIthoutAuthToken()  {
+
         HashMap<String, String> headerValue = new HashMap<>();
         headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
-        // Create a bookingId and get the bookingId from the response and pass it in the delete Api request
-        Response response = bookingController.postBooking(createBookingRequest, headerValue);
         //Make a request for Delete API
-        Response deleteResponse = bookingController.deleteBooking(headerValue, response.path("bookingid"));
+        Response deleteResponse = bookingController.deleteBooking(headerValue, createBooking.getBookingId());
 
         LOG.info("ASSERTING THE API RESPONSE");
         assertEquals(403, deleteResponse.getStatusCode());

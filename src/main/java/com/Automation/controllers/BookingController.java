@@ -34,6 +34,11 @@ public class BookingController {
         return baseSetUp.patchApiWithPathParam(url, createBookingRequest, Header.JSON.getValue(), headerParam, Param);
     }
 
+    public Response patchBookingWithoutBody( HashMap<String, String> headerParam, Integer Param) {
+        final String url = configReader.getApplicationUrl() + EndPoint.BOOKING_DETAILS.UPDATE_BOOKING;
+        return baseSetUp.patchApiWithPathParamAndWithoutBody(url, Header.JSON.getValue(), headerParam, Param);
+    }
+
     public Response putBooking(CreateBookingRequest createBookingRequest, HashMap<String, String> headerParam, Integer Param) {
         final String url = configReader.getApplicationUrl() + EndPoint.BOOKING_DETAILS.UPDATE_BOOKING;
         return baseSetUp.putApiWithPathParam(url, createBookingRequest, Header.JSON.getValue(), headerParam, Param);
