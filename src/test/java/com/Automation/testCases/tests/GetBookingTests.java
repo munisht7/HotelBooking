@@ -4,6 +4,7 @@ import com.Automation.controllers.BookingController;
 import com.Automation.model.CreateBookingRequest;
 import com.Automation.testCases.dataProvider.BookingDataProvider;
 import com.Automation.util.CreateBooking;
+import com.Automation.util.GetAuth;
 import com.Automation.util.Header;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
@@ -25,6 +26,8 @@ public class GetBookingTests {
     private static final Logger LOG = LoggerFactory.getLogger(GetBookingTests.class);
     BookingController bookingController = new BookingController();
     CreateBooking createBooking = new CreateBooking();
+    GetAuth getAuth = new GetAuth();
+
 
     @Test
     @DisplayName("validating the Get Booking without Filter")
@@ -41,6 +44,23 @@ public class GetBookingTests {
     }
 
     @Test
+    @DisplayName("validating the Get Booking when the booking is not present")
+    public void getBookingDetailsForDeletedBooking() {
+        // create a booking
+        Response createBookingResponse = createBooking.bookingResponse();
+        // Adding the headers in the request
+        HashMap<String, String> headerValue = new HashMap<>();
+        headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
+        headerValue.put(Header.COOKIE.getValue(), "token=" + getAuth.getAuth());
+
+        // delete booking
+        Response deleteResponse = bookingController.deleteBooking(headerValue, createBookingResponse.path("bookingid"));
+        // Get the booking details for the deleted booking
+        Response getresponse = bookingController.getBookingWithPathParam(headerValue, createBookingResponse.path("bookingid"));
+        assertEquals(404, getresponse.getStatusCode());
+    }
+
+    @Test
     @UseDataProvider(value = "createBookingDetails", location = BookingDataProvider.class)
     @DisplayName("validating the Get Booking with one parameter")
     public void getBookingDetailsWithParameter(Object CreateRequest) {
@@ -48,6 +68,7 @@ public class GetBookingTests {
         // Adding the headers in the request
         HashMap<String, String> headerValue = new HashMap<>();
         headerValue.put(Header.ACCEPT.getValue(), Header.JSON.getValue());
+        headerValue.put(Header.COOKIE.getValue(), "token=" + getAuth.getAuth());
         // Create a bookingId and get the bookingId from the response and pass it in the get Api request
         Response response = bookingController.postBooking(createBookingRequest, headerValue);
         // Make a get request with the bookingid obtained from the post request
