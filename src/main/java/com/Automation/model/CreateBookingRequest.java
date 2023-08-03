@@ -27,4 +27,6 @@ public class CreateBookingRequest {
 
     @JsonProperty("additionalneeds")
     private String additionalneeds;
+
+
 }
